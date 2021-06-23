@@ -1,0 +1,21 @@
+{% extends 'django_bootstrap5/bootstrap5.html' %}
+
+{% load i18n %}
+{% load django_bootstrap5 %}
+
+{% block bootstrap5_title %}{% translate 'Sign Up' %}{% endblock %}
+
+{% block bootstrap5_content %}
+  <div class="container">
+    {% bootstrap_messages %}
+    <h2>{% translate 'Sign Up' %}</h2>
+    <a href="{% url 'login' %}">{% translate ' Back to log in' %}</a>
+    <form method="post">
+      {% csrf_token %}
+      {% bootstrap_form form %}
+
+      {% bootstrap_button button_type="submit" content="OK" %}
+      {% bootstrap_button button_type="reset" content="Cancel" %}
+    </form>
+  </div>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'django_bootstrap5/bootstrap5.html' %}
+
+{% load i18n %}
+{% load django_bootstrap5 %}
+
+{% block bootstrap5_title %}{% translate 'User profile' %}{% endblock %}
+
+{% block bootstrap5_content %}
+  <div class="container">
+    {% bootstrap_messages %}
+    <h2>{% translate 'User profile' %}</h2>
+    <div class="row">{% translate 'Surname' %}: {{ user.surname }}</div>
+    <div class="row">{% translate 'Patronymic' %}: {{ user.patronymic }}</div>
+    <div class="row">{% translate 'Name' %}: {{ user.name }}</div>
+    <div class="row">email: {{ user.email }}</div>
+  </div>
+{% endblock %}
