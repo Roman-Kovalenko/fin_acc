@@ -22,6 +22,19 @@ class CustomUser(AbstractBaseUser, PermissionsMixin):
     is_active = models.BooleanField(_('is active'), default=True)
     date_joined = models.DateTimeField(_('date joined'), default=timezone.now)
 
+    initial_amount = models.DecimalField(
+        _('initial amount'),
+        max_digits=50,
+        decimal_places=2,
+        default=0
+    )
+    current_amount = models.DecimalField(
+        _('current amount'),
+        max_digits=50,
+        decimal_places=2,
+        default=0
+    )
+
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = []
 

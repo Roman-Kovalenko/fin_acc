@@ -1,2 +1,5 @@
 Django==3.2.4
 django-bootstrap5==2.0.1
+django-filter==2.4.0
+django-tables2==2.4.0
+Pillow==8.2.0

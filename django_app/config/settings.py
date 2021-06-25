@@ -46,8 +46,11 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'django_bootstrap5',
+    'django_filters',
+    'django_tables2',
 
     'users',
+    'finance'
 ]
 
 MIDDLEWARE = [
