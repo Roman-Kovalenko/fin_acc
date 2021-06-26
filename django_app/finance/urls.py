@@ -9,6 +9,7 @@ from .views import (
     TransactionCreditUpdateView,
     FilteredTransactionTableView,
     TransactionDeleteView,
+    HomeView
 )
 
 
@@ -42,7 +43,8 @@ transaction_urlpatterns = ([
              TransactionCreditUpdateView.as_view(),
              name='credit')
     ], 'update'), namespace=None)),
-    path('table', FilteredTransactionTableView.as_view(), name='table'),
+    path('table/', FilteredTransactionTableView.as_view(), name='table'),
+    path('main/', HomeView.as_view(), name='main'),
     path('delete/<int:pk>/', TransactionDeleteView.as_view(), name='delete'),
 ], 'transaction')
 

@@ -1,42 +1,13 @@
-{% extends 'django_bootstrap5/bootstrap5.html' %}
+{% extends 'base.html' %}
 
-{% load i18n %}
 {% load django_bootstrap5 %}
 
-{% block bootstrap5_title %}{{ title }}{% endblock %}
+{% block content %}
+  <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {% bootstrap_form form %}
 
-{% block bootstrap5_content %}
-  <div class="container">
-    {% bootstrap_messages %}
-    <ul class="nav nav-pills">
-        <li class="nav-item"><a class="nav-link" href="{% url 'home' %}">home</a></li>
-        <li class="nav-item"><a class="nav-link" href="{% url 'home' %}">home</a></li>
-        <li class="nav-item"><a class="nav-link" href="{% url 'home' %}">home</a></li>
-        <li class="nav-item"><a class="nav-link" href="{% url 'home' %}">home</a></li>
-        <li class="nav-item"><a class="nav-link" href="{% url 'home' %}">home</a></li>
-        <li class="nav-item"><a class="nav-link" href="{% url 'home' %}">home</a></li>
-        <li class="nav-item"><a class="nav-link" href="{% url 'home' %}">home</a></li>
-        <li class="nav-item"><a class="nav-link" href="{% url 'home' %}">home</a></li>
-        <li class="nav-item"><a class="nav-link" href="{% url 'home' %}">home</a></li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Профиль пользователя
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="{% url 'profile' %}">Профиль пользователя</a></li>
-            <li><a class="dropdown-item" href="{% url 'password_change' %}">Сменить пароль</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="{% url 'logout' %}">Выход из профиля</a></li>
-          </ul>
-        </li>
-    </ul>
-    <h2>{{ title }}</h2>
-    <form method="post">
-      {% csrf_token %}
-      {% bootstrap_form form %}
-
-      {% bootstrap_button button_type="submit" content="OK" %}
-      {% bootstrap_button button_type="reset" content="Cancel" %}
-    </form>
-  </div>
+    {% bootstrap_button button_type="submit" content="OK" %}
+    {% bootstrap_button button_type="reset" content="Cancel" %}
+  </form>
 {% endblock %}

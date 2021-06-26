@@ -26,6 +26,7 @@ class ProfileView(TemplateView):
     Временная затычка для отображения профиля пользователя
     """
     template_name = 'users/profile.html'
+    extra_context={'title': _('User profile')}
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)

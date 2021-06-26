@@ -85,10 +85,13 @@ class Transaction(models.Model):
         default=None,
     )
 
-    def get_update_url(self):
+    def get_update_url(self) -> str:
         type_str = 'debit' if self.category.is_debit else 'credit'
         return reverse(f'finance:transaction:update:{type_str}',
                        kwargs={'pk': self.id})
+
+    def get_delete_url(self) -> str:
+        return reverse('finance:transaction:delete', kwargs={'pk': self.id})
 
     def __str__(self):
         return f'{self.amount} {self.datetime} {self.user}'

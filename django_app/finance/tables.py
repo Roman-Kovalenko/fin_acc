@@ -15,7 +15,15 @@ class TransactionTable(tables.Table):
         return mark_safe(
             '<br>'.join((
                 build_link(record.get_update_url(), text='Редактировать'),
-                build_link('#', text='Тут будет модалка с запросом на удаление')
+                build_link(
+                    '#',
+                    text='Удалить',
+                    attrs={
+                        'data-bs-toggle': 'modal',
+                        'data-bs-target': '#deleteDialogModal',
+                        'data-bs-del-url': record.get_delete_url()
+                    }
+                )
             ))
         )
 
