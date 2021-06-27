@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 
+{% load render_table from django_tables2 %}
 {% load django_bootstrap5 %}
 
 {% block content %}
@@ -24,10 +25,14 @@
       <p class="text-dark"><b>{{ amount_all_sum|default_if_none:0|floatformat:"2g" }} ₽</b></p>
     </div>
   </div>
+
   <div class="d-flex flex-row justify-content-center align-items-center my-3">
     {% url 'finance:transaction:create:debit' as debit_url %}
     {% url 'finance:transaction:create:credit' as credit_url %}
     {% bootstrap_button 'Добавить расход' href=debit_url button_class='mx-1 btn-outline-success' %}
     {% bootstrap_button 'Добавить расход' href=credit_url button_class='mx-1 btn-outline-danger' %}
   </div>
+
+  <h3>Постоянные расходы на текущий месяц</h3>
+  {% render_table table %}
 {% endblock %}

@@ -9,7 +9,12 @@ from .views import (
     TransactionCreditUpdateView,
     FilteredTransactionTableView,
     TransactionDeleteView,
-    HomeView
+    HomeView,
+    PeriodicTransactionCreditCreateView,
+    PeriodicTransactionCreditUpdateView,
+    PeriodicTransactionDeleteView,
+    TransactionFromPeriodicCreditCreateView,
+    FilteredPeriodicTransactionTableView
 )
 
 
@@ -33,7 +38,10 @@ transaction_urlpatterns = ([
              name='debit'),
         path('credit/',
              TransactionCreditCreateView.as_view(),
-             name='credit')
+             name='credit'),
+        path('credit/from/periodic/<int:pk>/',
+             TransactionFromPeriodicCreditCreateView.as_view(),
+             name='credit_from_periodic')
     ], 'create'), namespace=None)),
     path('update/', include(([
         path('debit/<int:pk>/',
@@ -48,8 +56,24 @@ transaction_urlpatterns = ([
     path('delete/<int:pk>/', TransactionDeleteView.as_view(), name='delete'),
 ], 'transaction')
 
+periodic_transaction_urlpatterns = ([
+    path('create/', include(([
+        path('credit/',
+             PeriodicTransactionCreditCreateView.as_view(),
+             name='credit')
+    ], 'create'), namespace=None)),
+    path('update/', include(([
+        path('credit/<int:pk>/',
+             PeriodicTransactionCreditUpdateView.as_view(),
+             name='credit')
+    ], 'update'), namespace=None)),
+    path('table/', FilteredPeriodicTransactionTableView.as_view(), name='table'),
+    path('delete/<int:pk>/', PeriodicTransactionDeleteView.as_view(), name='delete'),
+], 'periodic_transaction')
+
 
 urlpatterns = [
     path('transaction_category/', include(transaction_category_urlpatterns)),
     path('transaction/', include(transaction_urlpatterns)),
+    path('periodic_transaction/', include(periodic_transaction_urlpatterns)),
 ]
