@@ -1,0 +1,205 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-06-28 16:57+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
+"%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: finance/forms.py:47 finance/forms.py:77 finance/forms.py:110
+msgid "Only positive allowed"
+msgstr "Разрешены только положительные"
+
+#: finance/forms.py:49 finance/forms.py:79 finance/forms.py:112
+msgid "Only negative allowed"
+msgstr "Разрешены только отрицательные"
+
+#: finance/models.py:29 finance/models.py:46 finance/models.py:85
+msgid "name"
+msgstr "название"
+
+#: finance/models.py:37 finance/models.py:81 finance/models.py:147
+msgid "currency"
+msgstr "валюта"
+
+#: finance/models.py:38
+msgid "currencies"
+msgstr "валюты"
+
+#: finance/models.py:47
+msgid "is debit"
+msgstr "это дебет"
+
+#: finance/models.py:55
+msgid "transaction category"
+msgstr "категория транзакций"
+
+#: finance/models.py:56
+msgid "transaction categories"
+msgstr "категории транзакций"
+
+#: finance/models.py:68 finance/models.py:134
+msgid "user"
+msgstr "пользователь"
+
+#: finance/models.py:74 finance/models.py:140
+msgid "category"
+msgstr "категория"
+
+#: finance/models.py:86
+msgid "start date"
+msgstr "начальная дата"
+
+#: finance/models.py:88
+msgid "end date"
+msgstr "конечная дата"
+
+#: finance/models.py:95
+msgid "pay day"
+msgstr "день платежа"
+
+#: finance/models.py:101 finance/models.py:159
+msgid "amount"
+msgstr "сумма"
+
+#: finance/models.py:102 finance/models.py:161
+msgid "comment"
+msgstr "комментарий"
+
+#: finance/models.py:123 finance/models.py:153
+msgid "periodic transaction"
+msgstr "повторяющаяся транзакция"
+
+#: finance/models.py:124
+msgid "periodic transactions"
+msgstr "повторяющиеся транзакции"
+
+#: finance/models.py:160
+msgid "date and time"
+msgstr "дата и время"
+
+#: finance/models.py:163
+msgid "receipt"
+msgstr "чек"
+
+#: finance/models.py:188
+msgid "transaction"
+msgstr "транзакция"
+
+#: finance/models.py:189
+msgid "transactions"
+msgstr "транзакции"
+
+#: finance/tables.py:15 finance/tables.py:49 finance/tables.py:86
+msgid "actions"
+msgstr "действия"
+
+#: finance/tables.py:82
+msgid "paid"
+msgstr "оплачено"
+
+#: finance/tables.py:83
+msgid "unpaid"
+msgstr "не оплачено"
+
+#: finance/templates/finance/filtered_table.html:26
+msgid "Delete transaction?"
+msgstr "Удалить транзакцию?"
+
+#: finance/templates/finance/filtered_table.html:37
+msgid "Cancel"
+msgstr "Отмена"
+
+#: finance/views.py:42
+msgid "Transaction category was created successfully"
+msgstr "Категория транзакций успешно создана"
+
+#: finance/views.py:52
+msgid "Create debit transaction category"
+msgstr "Создание категории транзакций прихода"
+
+#: finance/views.py:62
+msgid "Create credit transaction category"
+msgstr "Создание категории транзакций списания"
+
+#: finance/views.py:91
+msgid "Create debit transaction"
+msgstr "Создание транзакции списания"
+
+#: finance/views.py:92
+msgid "Transaction debit was created successfully"
+msgstr "Транзакция прихода успешно создана"
+
+#: finance/views.py:102 finance/views.py:249
+msgid "Create credit transaction"
+msgstr "Создание транзакции списания"
+
+#: finance/views.py:103 finance/views.py:250
+msgid "Transaction credit was created successfully"
+msgstr "Транзакция списания успешно создана"
+
+#: finance/views.py:113
+msgid "Update debit transaction"
+msgstr "Редактировать транзакцию прихода"
+
+#: finance/views.py:114
+msgid "Transaction debit was updated successfully"
+msgstr "Транзакция прихода успешно отредактирована"
+
+#: finance/views.py:124
+msgid "Update credit transaction"
+msgstr "Редактировать транзакцию списания"
+
+#: finance/views.py:125
+msgid "Transaction credit was updated successfully"
+msgstr "Транзакция списания успешно отредактирована"
+
+#: finance/views.py:134
+msgid "Transaction was deleted"
+msgstr "Транзакция удалена"
+
+#: finance/views.py:147
+msgid "Transaction table with filter"
+msgstr "Таблица транзакций с фильтрацией"
+
+#: finance/views.py:161
+msgid "Main page"
+msgstr "Основная страница"
+
+#: finance/views.py:217
+msgid "Create credit periodic transaction"
+msgstr "Создание повторяющейся транзакции списания"
+
+#: finance/views.py:218
+msgid "Periodic transaction credit was created successfully"
+msgstr "Повторяющаяся транзакция списания успешно создана"
+
+#: finance/views.py:228
+msgid "Update credit periodic transaction"
+msgstr "Редактирование повторяющейся транзакции списания"
+
+#: finance/views.py:229
+msgid "Periodic transaction credit was updated successfully"
+msgstr "Повторяющаяся транзакция списания успешно отредактирована"
+
+#: finance/views.py:238
+msgid "Periodic transaction was deleted"
+msgstr "Повторяющаяся транзакция удалена"
+
+#: finance/views.py:277
+msgid "Periodic transaction table with filter"
+msgstr "Таблица повторяющихся транзакций с фильтрацией"

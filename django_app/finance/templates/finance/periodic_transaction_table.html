@@ -7,7 +7,7 @@
   <div class="d-flex flex-row justify-content-center align-items-center my-3">
     {#{% url 'finance:transaction:create:debit' as debit_url %}#}
     {% url 'finance:periodic_transaction:create:credit' as credit_url %}
-    {#{% bootstrap_button 'Добавить расход' href=debit_url button_class='mx-1 btn-outline-success' %}#}
+    {#{% bootstrap_button 'Добавить приход' href=debit_url button_class='mx-1 btn-outline-success' %}#}
     {% bootstrap_button 'Добавить периодический расход' href=credit_url button_class='mx-1 btn-outline-danger' %}
   </div>
 {% endblock %}

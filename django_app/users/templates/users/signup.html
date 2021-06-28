@@ -14,8 +14,10 @@
       {% csrf_token %}
       {% bootstrap_form form %}
 
-      {% bootstrap_button button_type="submit" content="OK" %}
-      {% bootstrap_button button_type="reset" content="Cancel" %}
+      {% translate 'OK' as ok_text %}
+      {% translate 'Cancel' as cancel_text %}
+      {% bootstrap_button button_type="submit" content=ok_text %}
+      {% bootstrap_button button_type="reset" content=cancel_text %}
     </form>
   </div>
 {% endblock %}
