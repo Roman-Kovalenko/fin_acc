@@ -2,22 +2,44 @@
 
 {% load i18n %}
 {% load django_bootstrap5 %}
+{% load static %}
 
 {% block bootstrap5_title %}{% translate 'Login' %}{% endblock %}
 
+{% block bootstrap5_extra_head %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}"> 
+{% endblock %}
+
 {% block bootstrap5_content %}
-  <div class="container">
+<div class="appCapsule">
+  <div class="section mt-2 text-center">
     {% bootstrap_messages %}
-    <h2>{% translate 'Login' %}</h2>
+    <h1>{% translate 'Login' %}</h1>
+  </div>
+  <div class="section mb-5 p2">
     <form method="post">
       {% csrf_token %}
-      {% bootstrap_form form %}
+      <div class="card">
+        <div class="card-body pb-1">
+            {% bootstrap_form form label_class='label' wrapper_class='form-group basic input-wrapper' %}
+        </div>
+      </div>
 
-      {% bootstrap_button button_type="submit" content="OK" %}
-      {% bootstrap_button button_type="reset" content="Cancel" %}
+      <div class="form-links mt-2">
+        <div>
+            <a href="{% url 'signup' %}">{% translate 'Sign up' %}</a>
+        </div>
+        <div>
+          <a href="{% url 'password_reset' %}" class="text-muted">{% translate 'Forgotten your password?' %}</a>
+        </div>
+      </div>
+
+      <div class="form-button-group transparent">
+        {% bootstrap_button button_type="submit" button_class='btn btn-primary btn-block btn-lg m-1' content="Log in" %}
+        {% bootstrap_button button_type="reset" button_class='btn btn-primary btn-lg m-1' content="Cancel" %}
+      </div>
     </form>
-    <a href="{% url 'signup' %}">{% translate 'Sign up' %}</a>
-    <br>
-    <a href="{% url 'password_reset' %}">{% translate 'Forgotten your password?' %}</a>
   </div>
+</div>
+</div>
 {% endblock %}
