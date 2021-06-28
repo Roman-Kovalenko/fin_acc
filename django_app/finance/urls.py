@@ -52,7 +52,7 @@ transaction_urlpatterns = ([
              name='credit')
     ], 'update'), namespace=None)),
     path('table/', FilteredTransactionTableView.as_view(), name='table'),
-    path('main/', HomeView.as_view(), name='main'),
+    # path('main/', HomeView.as_view(), name='main'),
     path('delete/<int:pk>/', TransactionDeleteView.as_view(), name='delete'),
 ], 'transaction')
 
@@ -73,6 +73,7 @@ periodic_transaction_urlpatterns = ([
 
 
 urlpatterns = [
+    path('main/', HomeView.as_view(), name='main'),
     path('transaction_category/', include(transaction_category_urlpatterns)),
     path('transaction/', include(transaction_urlpatterns)),
     path('periodic_transaction/', include(periodic_transaction_urlpatterns)),

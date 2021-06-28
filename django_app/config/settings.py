@@ -147,7 +147,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 AUTH_USER_MODEL = 'users.CustomUser'
 
-LOGIN_REDIRECT_URL = reverse_lazy('finance:transaction:main')
+LOGIN_REDIRECT_URL = reverse_lazy('finance:main')
 LOGIN_URL = reverse_lazy('login')
 
 STATIC_URL = '/static/'

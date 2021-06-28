@@ -9,10 +9,10 @@ from django.views.generic import TemplateView
 urlpatterns = [
     path('admin/', admin.site.urls),
     # TODO: Замена на 'finance:transaction:main' в будущем
-    path('home/', login_required(TemplateView.as_view(
-        template_name='home.html',
-        extra_context={'title': _('Main page')}
-    )), name='home'),
+    # path('home/', login_required(TemplateView.as_view(
+    #     template_name='home.html',
+    #     extra_context={'title': _('Main page')}
+    # )), name='home'),
     path('users/', include('users.urls')),
     path('finance/', include('finance.urls')),
 ]
