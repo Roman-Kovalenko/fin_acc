@@ -150,8 +150,13 @@ AUTH_USER_MODEL = 'users.CustomUser'
 LOGIN_REDIRECT_URL = reverse_lazy('finance:transaction:main')
 LOGIN_URL = reverse_lazy('login')
 
-if DEBUG:
-    EMAIL_BACKEND = 'django.core.mail.backends.dummy.EmailBackend'
-
 STATIC_URL = '/static/'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
+
+
+# EMAIL settings:
+EMAIL_USE_TLS = os.environ.get('EMAIL_USE_TLS', True)
+EMAIL_HOST = os.environ.get('EMAIL_HOST', 'smtp.gmail.com')
+EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER', 'asdadasasddasdsa@gmail.com')
+EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD', 'passwordtest')
+EMAIL_PORT = os.environ.get('EMAIL_PORT', 587)
