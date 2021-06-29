@@ -1,5 +1,7 @@
 from datetime import datetime
+import json
 
+from django.core.serializers.json import DjangoJSONEncoder
 from django.shortcuts import get_object_or_404
 from django.contrib.messages.views import SuccessMessageMixin
 from django.contrib.auth.decorators import login_required
@@ -23,7 +25,8 @@ from .forms import (
 from .filters import (
     TransactionFilter,
     TransactionDateFilter,
-    PeriodicTransactionFilter
+    PeriodicTransactionFilter,
+    TransactionCategoryFilter
 )
 from .tables import (
     TransactionTable,
@@ -275,3 +278,38 @@ class FilteredPeriodicTransactionTableView(SingleTableMixin, FilterView):
     template_name = 'finance/periodic_transaction_table.html'
     filterset_class = PeriodicTransactionFilter
     extra_context = {'title': _('Periodic transaction table with filter')}
+
+
+# TODO: По хорошему json надо не в шаблон писать, а отдавать по определенному url
+@method_decorator(login_required, name='dispatch')
+class TransactionPieChartFilterView(FilterView):
+    """
+    View для построения графиков по разным временным отрезкам
+    """
+    model = TransactionCategory
+    template_name = 'finance/transaction_statisics.html'
+    filterset_class = TransactionCategoryFilter
+    extra_context = {'title': _('Cost statistics')}
+
+    def get(self, request, *args, **kwargs):
+        filterset_class = self.get_filterset_class()
+        filterset = self.get_filterset(filterset_class)
+
+        if not filterset.is_bound or filterset.is_valid() or not self.get_strict():
+            self.object_list = filterset.qs
+        else:
+            self.object_list = filterset.queryset.none()
+
+        chart_data = [{
+            'name': obj['name'],
+            'y': abs(float(obj['amount_sum']))
+        } for obj in self.object_list.with_amount_sum().filter(
+            amount_sum__lt=0).values('name', 'amount_sum')]
+
+        category_with_amount = json.dumps(chart_data, cls=DjangoJSONEncoder)
+
+        context = self.get_context_data(
+            filter=filterset,
+            category_with_amount=category_with_amount
+        )
+        return self.render_to_response(context)

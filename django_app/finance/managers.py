@@ -49,3 +49,21 @@ class PeriodicTransactionQuerySet(QuerySet):
         """
         month_date_range = get_current_month_date_range()
         return self.with_amount_sum_between_dates(*month_date_range)
+
+
+class TransactionCategoryQuerySet(QuerySet):
+    """
+    QuerySet для категорий транзакций
+    """
+
+    def with_amount_sum(self):
+        """
+        Возвращает суммы покупок по категориям
+        """
+        return self.filter(is_debit=False).annotate(
+            amount_sum=Coalesce(
+                Sum('transactions__amount'),
+                0,
+                output_field=DecimalField(decimal_places=2)
+            )
+        )

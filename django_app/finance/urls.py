@@ -14,7 +14,8 @@ from .views import (
     PeriodicTransactionCreditUpdateView,
     PeriodicTransactionDeleteView,
     TransactionFromPeriodicCreditCreateView,
-    FilteredPeriodicTransactionTableView
+    FilteredPeriodicTransactionTableView,
+    TransactionPieChartFilterView
 )
 
 
@@ -29,6 +30,7 @@ transaction_category_urlpatterns = ([
              TransactionCategoryCreditCreateView.as_view(),
              name='credit')
     ], 'create'), namespace=None)),
+    path('statistic/', TransactionPieChartFilterView.as_view(), name='statistic'),
 ], 'transaction_category')
 
 transaction_urlpatterns = ([

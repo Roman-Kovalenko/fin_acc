@@ -1,6 +1,6 @@
 import django_filters
 
-from .models import Transaction, PeriodicTransaction
+from .models import Transaction, PeriodicTransaction, TransactionCategory
 
 
 class TransactionFilter(django_filters.FilterSet):
@@ -33,3 +33,14 @@ class PeriodicTransactionFilter(django_filters.FilterSet):
     class Meta:
         model = PeriodicTransaction
         fields = ('currency', 'category', 'user')
+
+
+class TransactionCategoryFilter(django_filters.FilterSet):
+    """
+    Фильтр для категорий транзакций
+    """
+    transactions__datetime = django_filters.DateRangeFilter()
+
+    class Meta:
+        model = TransactionCategory
+        fields = ('transactions__datetime', 'transactions__user')
