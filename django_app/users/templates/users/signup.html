@@ -1,14 +1,7 @@
-{% extends 'django_bootstrap5/bootstrap5.html' %}
+{% extends 'unauthorized_base.html' %}
 
 {% load i18n %}
 {% load django_bootstrap5 %}
-{% load static %}
-
-{% block bootstrap5_title %}{% translate 'Sign Up' %}{% endblock %}
-
-{% block bootstrap5_extra_head %}
-<link rel="stylesheet" href="{% static 'css/style.css' %}"> 
-{% endblock %}
 
 {% block bootstrap5_content %}
 <div class="appCapsule">
