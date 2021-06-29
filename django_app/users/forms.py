@@ -10,8 +10,6 @@ class UserRegisterForm(UserCreationForm):
     """
     Форма для регистрации пользователя
     """
-    # email = forms.EmailField()
-
     class Meta:
         model = User
-        fields = ('email', 'name', 'patronymic', 'surname')
+        fields = ('email', 'name', 'patronymic', 'surname', 'initial_amount')

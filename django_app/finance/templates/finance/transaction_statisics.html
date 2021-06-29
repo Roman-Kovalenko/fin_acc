@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% load i18n %}
+{% load render_table from django_tables2 %}
+{% load django_bootstrap5 %}
+
+{% block bootstrap5_extra_head %}
+  {{ block.super }}
+  <link rel="stylesheet" href="{% static 'finance/css/highcharts.css' %}">
+{% endblock %}
+
+{% block content %}
+  {% if filter %}
+    <form method="get" class="row row-cols-lg-auto g-3 align-items-center" >
+      {% bootstrap_form filter.form layout='inline' %}
+      {% bootstrap_button 'filter' %}
+    </form>
+  {% endif %}
+
+  <figure class="highcharts-figure">
+    <div id="pie_chart_container"></div>
+  </figure>
+
+  <figure class="highcharts-figure">
+      <div id="bar_chart_container"></div>
+  </figure>
+
+{% endblock %}
+
+{% block bootstrap5_extra_script %}
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+  <script>
+    _series = [{
+      name: 'Расходы',
+      colorByPoint: true,
+      data: {{ category_with_amount|safe }}
+    }]
+    _categories = []
+    _bar_series = []
+    for (const element of {{ category_with_amount|safe }}) {
+      _categories.push(element.name)
+      _bar_series.push(element.y)
+    }
+  </script>
+  <script src="{% static 'finance/js/pie_chart.js' %}"></script>
+  <script src="{% static 'finance/js/bar_chart.js' %}"></script>
+{% endblock %}

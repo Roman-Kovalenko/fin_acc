@@ -1,36 +1,56 @@
-{% extends 'django_bootstrap5/bootstrap5.html' %}
+{% extends 'base.html' %}
 
-{% load i18n %}
+{% load render_table from django_tables2 %}
 {% load django_bootstrap5 %}
+{% load static %}
 
-{% block bootstrap5_title %}{% translate 'Home' %}{% endblock %}
+{% block content %}
+<div class="section pt-1">
+  <div class="wallet-card">
+    <div class="balance">
+      <div class="left">
+          <span class="title">Баланс за период</span>
+          <h2 class="total">{{ amount_all_sum|default_if_none:0|floatformat:"2g" }} ₽</h2>
+      </div>
+      <div class="right">
+        {% if filter %}
+        <form method="get">          
+            {% bootstrap_form filter.form wrapper_class='form-group basic input-wrapper' label_class='label' %}
+            {% bootstrap_button 'filter' button_class='btn btn-primary btn-sm btn-block' %}
+        </form>
+      {% endif %}
+      </div>
+    </div>
 
-{% block bootstrap5_content %}
-  <div class="container">
-    {% bootstrap_messages %}
-    <h2>{% translate 'Home' %}</h2>
-    <ul class="nav nav-pills">
-        <li class="nav-item"><a class="nav-link" href="{% url 'home' %}">home</a></li>
-        <li class="nav-item"><a class="nav-link" href="{% url 'home' %}">home</a></li>
-        <li class="nav-item"><a class="nav-link" href="{% url 'home' %}">home</a></li>
-        <li class="nav-item"><a class="nav-link" href="{% url 'home' %}">home</a></li>
-        <li class="nav-item"><a class="nav-link" href="{% url 'home' %}">home</a></li>
-        <li class="nav-item"><a class="nav-link" href="{% url 'home' %}">home</a></li>
-        <li class="nav-item"><a class="nav-link" href="{% url 'home' %}">home</a></li>
-        <li class="nav-item"><a class="nav-link" href="{% url 'home' %}">home</a></li>
-        <li class="nav-item"><a class="nav-link" href="{% url 'home' %}">home</a></li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Профиль пользователя
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="{% url 'profile' %}">Профиль пользователя</a></li>
-            <li><a class="dropdown-item" href="{% url 'password_change' %}">Сменить пароль</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="{% url 'logout' %}">Выход из профиля</a></li>
-          </ul>
-        </li>
-    </ul>
-    <p>Тут будет основная страница</p>
+    <div class="wallet-footer">
+          {% url 'finance:transaction:create:debit' as debit_url %}
+          {% bootstrap_button 'Добавить приход' href=debit_url button_class='mx-1 btn-success' %}
+
+          {% url 'finance:transaction:create:credit' as credit_url %}
+          {% bootstrap_button 'Добавить расход' href=credit_url button_class='mx-1 btn-danger' %}
+    </div> 
   </div>
+</div>
+
+  <div class="section">
+    <div class="row mt-2">
+      <div class="col-6">
+        <div class="stat-box">
+            <div class="title">Доходы</div>
+            <div class="value text-success">{{ amount_debit_sum|default_if_none:0|floatformat:"2g" }} ₽</div>
+        </div>
+    </div>
+
+    <div class="col-6">
+      <div class="stat-box">
+          <div class="title">Расходы</div>
+          <div class="value text-danger">{{ amount_credit_sum|default_if_none:0|floatformat:"2g" }} ₽</div>
+      </div>
+    </div>
+
+    </div>
+  </div>
+
+  <h3>Постоянные расходы на текущий месяц</h3>
+  {% render_table table %}
 {% endblock %}
