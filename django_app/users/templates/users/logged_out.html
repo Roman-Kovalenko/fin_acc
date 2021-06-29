@@ -2,14 +2,28 @@
 
 {% load i18n %}
 {% load django_bootstrap5 %}
+{% load static %}
 
 {% block bootstrap5_title %}{% translate 'Logged out' %}{% endblock %}
 
+{% block bootstrap5_extra_head %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}"> 
+{% endblock %}
+
 {% block bootstrap5_content %}
-  <div class="container">
-    {% bootstrap_messages %}
-    <h2>{% translate 'Logged out' %}</h2>
-    <p>{% translate "Thanks for spending some quality time with the Web site today." %}</p>
-    <p><a href="{% url 'login' %}">{% translate 'Log in again' %}</a></p>
+  <div class="appCapsule">
+    <div class="section mt-2">
+      <div class="left">
+        <a href="{% url 'login' %}">{% translate 'Log in again' %}</a>
+      </div>
+      <div class="pageTitle"></div>
+      <div class="right"></div>
+    </div>
+
+    <div class="section mt-2 text-center">
+      {% bootstrap_messages %}
+      <h1>{% translate 'Logged out' %}</h1>
+      <h4>{% translate "Thanks for spending some quality time with the Web site today." %}</h4>
+    </div>
   </div>
 {% endblock %}
