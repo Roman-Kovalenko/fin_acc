@@ -42,10 +42,12 @@
         <h1>{{ title }}</h1>
     </div>
     
-    <div class="section mt-4">
-        {% bootstrap_messages %}
-        {% block content %}{% endblock %}
-    </div>
+    <!-- <div class="section mt-4"></div>
+
+    </div> -->
+
+    {% bootstrap_messages %}
+    {% block content %}{% endblock %}
 
     <div class="appBottomMenu">
         <a href="{% url 'finance:transaction:table' %}" class="item active">
