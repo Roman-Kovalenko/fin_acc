@@ -10,13 +10,16 @@
 <link rel="stylesheet" href="{% static 'css/style.css' %}"> 
 {% endblock %}
 
+
 {% block bootstrap5_content %}
 <div class="appCapsule">
+
   <div class="section mt-2 text-center">
     {% bootstrap_messages %}
     <h1>{% translate 'Login' %}</h1>
   </div>
-  <div class="section mb-5 p2">
+
+  <div class="section mb-5 p-2">
     <form method="post">
       {% csrf_token %}
       <div class="card">
@@ -35,8 +38,12 @@
       </div>
 
       <div class="form-button-group transparent">
-        {% bootstrap_button button_type="submit" button_class='btn btn-primary btn-block btn-lg m-1' content="Log in" %}
-        {% bootstrap_button button_type="reset" button_class='btn btn-primary btn-lg m-1' content="Cancel" %}
+
+        {% translate 'OK' as ok_text %}
+        {% translate 'Cancel' as cancel_text %}
+
+        {% bootstrap_button button_type="submit" button_class='btn btn-primary btn-block btn-lg m-1' content=ok_text %}
+        {% bootstrap_button button_type="reset" button_class='btn btn-primary btn-lg m-1' content=cancel_text %}
       </div>
     </form>
   </div>
