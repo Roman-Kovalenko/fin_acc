@@ -32,7 +32,7 @@ SECRET_KEY = os.environ.get(
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['financeapp2021.pythonanywhere.com',]
 
 
 # Application definition
@@ -150,8 +150,14 @@ AUTH_USER_MODEL = 'users.CustomUser'
 LOGIN_REDIRECT_URL = reverse_lazy('finance:main')
 LOGIN_URL = reverse_lazy('login')
 
+# STATIC_URL = '/static/'
+# STATIC_ROOT = BASE_DIR / 'staticfiles'
+
 STATIC_URL = '/static/'
-STATIC_ROOT = BASE_DIR / 'staticfiles'
+MEDIA_URL = '/media/'
+STATIC_ROOT = '/home/financeapp2021/static'
+MEDIA_ROOT = '/home/financeapp2021/media'
+
 
 
 # EMAIL settings:
