@@ -37,7 +37,7 @@ class TransactionCategoryCreateMixin():
     Mixin создания категории транзакции
     """
     model = TransactionCategory
-    success_url = reverse_lazy('finance:transaction:main')
+    success_url = reverse_lazy('finance:main')
     form_class = TransactionCategoryForm
     success_message = _('Transaction category was created successfully')
 
@@ -67,7 +67,7 @@ class TransactionMixin():
     базовый Mixin транзакции
     """
     model = Transaction
-    success_url = reverse_lazy('finance:transaction:main')
+    success_url = reverse_lazy('finance:main')
     form_class = TransactionForm
 
 
@@ -193,7 +193,7 @@ class PeriodicTransactionMixin():
     базовый Mixin периодических транзакций
     """
     model = PeriodicTransaction
-    success_url = reverse_lazy('finance:transaction:main')
+    success_url = reverse_lazy('finance:main')
     form_class = PeriodicTransactionForm
 
 
