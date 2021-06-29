@@ -38,7 +38,6 @@ class Currency(models.Model):
         verbose_name_plural = _('currencies')
 
 
-# TODO: Добавить миграции с заготовленными категориями транзакций
 class TransactionCategory(models.Model):
     """
     Модель категории транзакций
