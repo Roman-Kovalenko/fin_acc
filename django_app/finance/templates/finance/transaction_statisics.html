@@ -11,26 +11,41 @@
 {% endblock %}
 
 {% block content %}
-  {% if filter %}
-    <form method="get" class="row row-cols-lg-auto g-3 align-items-center" >
-      {% bootstrap_form filter.form layout='inline' %}
-      {% bootstrap_button 'filter' %}
-    </form>
-  {% endif %}
+<div class="section mb-5 p-2">
+  <div class="card">
+    <div class="card-body">
+      {% if filter %}
+        <form method="get" class="row row-cols-lg-auto g-3 align-items-center" >
+          {% bootstrap_form filter.form layout='inline' %}
+          {% bootstrap_button 'filter' %}
+        </form>
+      {% endif %}
+    </div>
+  </div>
 
-  <figure class="highcharts-figure">
-    <div id="pie_chart_container"></div>
-  </figure>
+  <div class="card my-2">
+    <div class="card-body p-0">
 
-  <figure class="highcharts-figure">
-      <div id="bar_chart_container"></div>
-  </figure>
+      <figure class="highcharts-figure">
+        <div id="pie_chart_container"></div> 
+      </figure>
+    
+      <figure class="highcharts-figure">
+          <div id="bar_chart_container"></div>
+      </figure>
 
+    </div>
+  </div>
+
+
+
+
+</div>
 {% endblock %}
 
 {% block bootstrap5_extra_script %}
   <script src="https://code.highcharts.com/highcharts.js"></script>
-  <script>
+  <script>   
     _series = [{
       name: 'Расходы',
       colorByPoint: true,

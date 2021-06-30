@@ -1,10 +1,16 @@
 {% extends 'base.html' %}
 
 {% load i18n %}
+{% load django_bootstrap5 %}
 
 {% block content %}
-  <div class="row">{% translate 'Surname' %}: {{ user.surname }}</div>
-  <div class="row">{% translate 'Patronymic' %}: {{ user.patronymic }}</div>
-  <div class="row">{% translate 'Name' %}: {{ user.name }}</div>
-  <div class="row">email: {{ user.email }}</div>
+<div class="appCapsule">
+  <ul class="listview simple-listview inset">
+    <li>{% translate 'Surname' %}: <b>{{ user.surname }}</b></li>
+    <li>{% translate 'Patronymic' %}: <b>{{ user.patronymic }}</b></li>
+    <li>{% translate 'Name' %}: <b>{{ user.name }}</b></li>
+    <li>email: <b>{{ user.email }}</b></li>
+  </ul>
+</div>
+
 {% endblock %}
