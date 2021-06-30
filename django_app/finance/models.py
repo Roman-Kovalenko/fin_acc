@@ -6,7 +6,7 @@ from django.core.validators import MaxValueValidator, MinValueValidator
 from django.utils.translation import gettext_lazy as _
 from django.urls import reverse
 
-from .managers import PeriodicTransactionQuerySet
+from .managers import PeriodicTransactionQuerySet, TransactionCategoryQuerySet
 
 
 User = get_user_model()
@@ -38,11 +38,12 @@ class Currency(models.Model):
         verbose_name_plural = _('currencies')
 
 
-# TODO: Добавить миграции с заготовленными категориями транзакций
 class TransactionCategory(models.Model):
     """
     Модель категории транзакций
     """
+    objects = TransactionCategoryQuerySet.as_manager()
+
     name = models.CharField(_('name'), max_length=100, unique=True)
     is_debit = models.BooleanField(_('is debit'))
 

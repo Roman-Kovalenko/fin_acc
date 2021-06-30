@@ -6,14 +6,14 @@
 {% block bootstrap5_title %}{{ title }}{% endblock %}
 
 {% block bootstrap5_extra_head %}
-<link rel="stylesheet" href="{% static 'users/css/style.css' %}"> 
+<link rel="stylesheet" href="{% static 'users/css/style.css' %}">
 {% endblock %}
 {% block bootstrap5_content %}
 
 <div class="appCapsule">
     <div class="appHeader bg-primary text-light">
         <div class="left"></div>
-        
+
         <div class="pageTitle">
             <a href="{% url 'finance:main' %}" class="text-white">
                 <img src="{% static 'users/img/logo.png' %}" alt="icon" class="loading-icon" width="50" height="50">
@@ -41,10 +41,6 @@
     <div class="section text-center", style="padding-top: 65px;">
         <h1>{{ title }}</h1>
     </div>
-    
-    <!-- <div class="section mt-4"></div>
-
-    </div> -->
 
     {% bootstrap_messages %}
     {% block content %}{% endblock %}
@@ -62,7 +58,7 @@
                 <strong>Постоянные траты</strong>
             </div>
         </a>
-        <a href="#" class="item active">
+        <a href="{% url 'finance:transaction_category:statistic' %}" class="item active">
             <div class="col">
                 <img src="{% static 'users/img/analysis.svg' %}" alt="icon" class="loading-icon" width="24" height="24">
                 <strong>Анализ расходов</strong>
