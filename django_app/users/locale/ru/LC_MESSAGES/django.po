@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-01 11:14+0400\n"
+"POT-Creation-Date: 2021-07-01 18:00+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,123 +20,128 @@ msgstr ""
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
 "%100>=11 && n%100<=14)? 2 : 3);\n"
 
-#: users/managers.py:16
+#: django_app/users/managers.py:16
 msgid "The email must be set"
 msgstr "Электронная почта должна быть указана"
 
-#: users/managers.py:31
+#: django_app/users/managers.py:31
 msgid "Superuser must have is_staff=True."
 msgstr "Суперпользователь должен быть с is_staff=True."
 
-#: users/managers.py:33
+#: django_app/users/managers.py:33
 msgid "Superuser must have is_superuser=True."
 msgstr "Суперпользователь должен быть с is_superuser=True."
 
-#: users/models.py:15
+#: django_app/users/models.py:16
 msgid "email address"
 msgstr "адрес электронной почты"
 
-#: users/models.py:17
+#: django_app/users/models.py:18
 msgid "surname"
 msgstr "фамилия"
 
-#: users/models.py:18
+#: django_app/users/models.py:19
 msgid "name"
 msgstr "имя"
 
-#: users/models.py:20
+#: django_app/users/models.py:21
 msgid "patronymic"
 msgstr "отчество"
 
-#: users/models.py:21
+#: django_app/users/models.py:22
 msgid "is staff"
 msgstr "это персонал"
 
-#: users/models.py:22
+#: django_app/users/models.py:23
 msgid "is active"
 msgstr "активный?"
 
-#: users/models.py:23
+#: django_app/users/models.py:24
 msgid "date joined"
 msgstr "дата регистрации"
 
-#: users/models.py:26
+#: django_app/users/models.py:27
 msgid "initial amount"
 msgstr "начальная сумма"
 
-#: users/models.py:32
+#: django_app/users/models.py:32
+msgid "The amount you currently have"
+msgstr "Сумма, которой вы располагаете"
+
+#: django_app/users/models.py:36
 msgid "current amount"
 msgstr "текущая сумма"
 
-#: users/models.py:50
+#: django_app/users/models.py:54
 msgid "user"
 msgstr "пользователь"
 
-#: users/models.py:51
+#: django_app/users/models.py:55
 msgid "users"
 msgstr "пользователи"
 
-#: users/templates/users/logged_out.html:10
+#: django_app/users/templates/users/logged_out.html:10
 msgid "Log in again"
 msgstr "Войти снова"
 
-#: users/templates/users/logged_out.html:18
+#: django_app/users/templates/users/logged_out.html:18
 msgid "Logged out"
 msgstr "Выход"
 
-#: users/templates/users/logged_out.html:19
+#: django_app/users/templates/users/logged_out.html:19
 msgid "Thanks for spending some quality time with the Web site today."
 msgstr "Спасибо за проведенное сегодня на сайте время"
 
-#: users/templates/users/login.html:11
+#: django_app/users/templates/users/login.html:11
 msgid "Login"
 msgstr "Вход"
 
-#: users/templates/users/login.html:25
+#: django_app/users/templates/users/login.html:25
 msgid "Sign up"
 msgstr "Регистрация"
 
-#: users/templates/users/login.html:28
+#: django_app/users/templates/users/login.html:28
 msgid "Forgotten your password?"
 msgstr "Забыли пароль?"
 
-#: users/templates/users/login.html:34
-#: users/templates/users/password_change_form.html:19
-#: users/templates/users/signup.html:32
+#: django_app/users/templates/users/login.html:34
+#: django_app/users/templates/users/password_change_form.html:10
+#: django_app/users/templates/users/signup.html:32
 msgid "OK"
 msgstr "OK"
 
-#: users/templates/users/login.html:35
-#: users/templates/users/password_change_form.html:20
+#: django_app/users/templates/users/login.html:35
+#: django_app/users/templates/users/password_change_form.html:11
+#: django_app/users/templates/users/signup.html:33
 msgid "Cancel"
 msgstr "Отмена"
 
-#: users/templates/users/password_change_done.html:9
+#: django_app/users/templates/users/password_change_done.html:6
 msgid "Your password was changed."
 msgstr "Ваш пароль изменен."
 
-#: users/templates/users/password_reset_complete.html:6
-#: users/templates/users/password_reset_complete.html:11
-#: users/templates/users/password_reset_done.html:19
-#: users/templates/users/password_reset_form.html:6
-#: users/templates/users/password_reset_form.html:20
+#: django_app/users/templates/users/password_reset_complete.html:6
+#: django_app/users/templates/users/password_reset_complete.html:11
+#: django_app/users/templates/users/password_reset_done.html:19
+#: django_app/users/templates/users/password_reset_form.html:6
+#: django_app/users/templates/users/password_reset_form.html:20
 msgid "Password reset"
 msgstr "Сброс пароля"
 
-#: users/templates/users/password_reset_complete.html:13
+#: django_app/users/templates/users/password_reset_complete.html:13
 msgid "Your password has been set. You may go ahead and log in now."
 msgstr "Ваш пароль установлен. Вы можете войти в систему сейчас"
 
-#: users/templates/users/password_reset_complete.html:15
+#: django_app/users/templates/users/password_reset_complete.html:15
 msgid "Log in"
 msgstr "Вход"
 
-#: users/templates/users/password_reset_confirm.html:6
-#: users/templates/users/password_reset_confirm.html:11
+#: django_app/users/templates/users/password_reset_confirm.html:6
+#: django_app/users/templates/users/password_reset_confirm.html:11
 msgid "Password reset confirmation"
 msgstr "Подтверждение сброса пароля"
 
-#: users/templates/users/password_reset_confirm.html:15
+#: django_app/users/templates/users/password_reset_confirm.html:15
 msgid ""
 "Please enter your new password twice so we can verify you typed it in "
 "correctly."
@@ -144,19 +149,19 @@ msgstr ""
 "Пожалуйста введите ваш новый пароль дважды, чтобы мы убедились в "
 "корректности ввода"
 
-#: users/templates/users/password_reset_confirm.html:22
+#: django_app/users/templates/users/password_reset_confirm.html:22
 msgid "New password:"
 msgstr "Новый пароль:"
 
-#: users/templates/users/password_reset_confirm.html:27
+#: django_app/users/templates/users/password_reset_confirm.html:27
 msgid "Confirm password:"
 msgstr "Подтверждение пароля:"
 
-#: users/templates/users/password_reset_confirm.html:30
+#: django_app/users/templates/users/password_reset_confirm.html:30
 msgid "Change my password"
 msgstr "Сменить мой пароль"
 
-#: users/templates/users/password_reset_confirm.html:36
+#: django_app/users/templates/users/password_reset_confirm.html:36
 msgid ""
 "The password reset link was invalid, possibly because it has already been "
 "used.  Please request a new password reset."
@@ -164,20 +169,20 @@ msgstr ""
 "Ссылка для сброса пароля не работает, возможно ей уже воспользовались. "
 "Пожалуйста сделайте сброс пароля уще раз"
 
-#: users/templates/users/password_reset_done.html:11
-#: users/templates/users/password_reset_form.html:12
-#: users/templates/users/signup.html:11
+#: django_app/users/templates/users/password_reset_done.html:11
+#: django_app/users/templates/users/password_reset_form.html:12
+#: django_app/users/templates/users/signup.html:11
 msgid " Back to log in"
 msgstr " Вернуться к странице входа"
 
-#: users/templates/users/password_reset_done.html:21
+#: django_app/users/templates/users/password_reset_done.html:21
 msgid ""
 "We’ve emailed you instructions for setting your password, if an account "
 "exists with the email you entered. You should receive them shortly."
 msgstr ""
 "На вашу электронную почту отправлена инструкция по восстановлению пароля"
 
-#: users/templates/users/password_reset_done.html:22
+#: django_app/users/templates/users/password_reset_done.html:22
 msgid ""
 "If you don’t receive an email, please make sure you’ve entered the address "
 "you registered with, and check your spam folder."
@@ -186,12 +191,12 @@ msgstr ""
 "электронный адрес, на который происходила регистрация и письмо не попало в "
 "спам."
 
-#: users/templates/users/password_reset_email.html:6
-#: users/templates/users/password_reset_email.html:11
+#: django_app/users/templates/users/password_reset_email.html:6
+#: django_app/users/templates/users/password_reset_email.html:11
 msgid "Home"
 msgstr "Домой"
 
-#: users/templates/users/password_reset_email.html:14
+#: django_app/users/templates/users/password_reset_email.html:14
 #, python-format
 msgid ""
 "You're receiving this email because you requested a password reset for your "
@@ -200,24 +205,24 @@ msgstr ""
 "Вы получили это письмо т.к. был запрошен сброс пароля для вашего профиля на "
 "сайте %(site_name)s."
 
-#: users/templates/users/password_reset_email.html:16
+#: django_app/users/templates/users/password_reset_email.html:16
 msgid "Please go to the following page and choose a new password:"
 msgstr "Пожалуйста перейдите на страницу и устновите новый пароль:"
 
-#: users/templates/users/password_reset_email.html:21
+#: django_app/users/templates/users/password_reset_email.html:21
 msgid "Your username, in case you’ve forgotten:"
 msgstr "Ваш username, если забыли:"
 
-#: users/templates/users/password_reset_email.html:23
+#: django_app/users/templates/users/password_reset_email.html:23
 msgid "Thanks for using our site!"
 msgstr "Спасибо за пользование нашим сайтом!"
 
-#: users/templates/users/password_reset_email.html:25
+#: django_app/users/templates/users/password_reset_email.html:25
 #, python-format
 msgid "The %(site_name)s team"
 msgstr "Команда сайта %(site_name)s"
 
-#: users/templates/users/password_reset_form.html:21
+#: django_app/users/templates/users/password_reset_form.html:21
 msgid ""
 "Forgotten your password? Enter your email address below, and we’ll email "
 "instructions for setting a new one."
@@ -225,42 +230,38 @@ msgstr ""
 "Забыли пароль? Введите ваш электронный адрес ниже и мы вышлем инструкцию по "
 "восстановлению."
 
-#: users/templates/users/password_reset_form.html:33
+#: django_app/users/templates/users/password_reset_form.html:33
 msgid "Reset my password"
 msgstr "Сбросить мой пароль"
 
-#: users/templates/users/profile.html:9
+#: django_app/users/templates/users/profile.html:6
 msgid "Surname"
 msgstr "Фамилия"
 
-#: users/templates/users/profile.html:10
+#: django_app/users/templates/users/profile.html:7
 msgid "Patronymic"
 msgstr "Отчество"
 
-#: users/templates/users/profile.html:11
+#: django_app/users/templates/users/profile.html:8
 msgid "Name"
 msgstr "Имя"
 
-#: users/templates/users/signup.html:18
+#: django_app/users/templates/users/signup.html:18
 msgid "Sign Up"
 msgstr "Регистрация"
 
-#: users/templates/users/signup.html:33
-msgid "Clear"
-msgstr ""
-
-#: users/urls.py:13
+#: django_app/users/urls.py:13
 msgid "Main page"
 msgstr "Главная страница"
 
-#: users/urls.py:20 users/urls.py:24
+#: django_app/users/urls.py:20 django_app/users/urls.py:24
 msgid "Password Change"
 msgstr "Изменение пароля"
 
-#: users/views.py:19
+#: django_app/users/views.py:19
 msgid "Your profile was created successfully"
 msgstr "Ваш профиль успешно создан"
 
-#: users/views.py:29
+#: django_app/users/views.py:29
 msgid "User profile"
 msgstr "Профиль пользователя"
