@@ -1,4 +1,5 @@
 from django.db import models
+from django.core.validators import MinValueValidator
 from django.contrib.auth.base_user import AbstractBaseUser
 from django.contrib.auth.models import PermissionsMixin
 from django.utils import timezone
@@ -26,8 +27,11 @@ class CustomUser(AbstractBaseUser, PermissionsMixin):
         _('initial amount'),
         max_digits=50,
         decimal_places=2,
-        default=0
+        default=0,
+        validators=(MinValueValidator(0),),
+        help_text=_('The amount you currently have')
     )
+    # TODO: использовать в будущем
     current_amount = models.DecimalField(
         _('current amount'),
         max_digits=50,
