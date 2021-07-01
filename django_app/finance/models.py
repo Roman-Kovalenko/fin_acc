@@ -3,6 +3,7 @@ from datetime import datetime, date
 from django.db import models
 from django.contrib.auth import get_user_model
 from django.core.validators import MaxValueValidator, MinValueValidator
+from django.utils import timezone
 from django.utils.translation import gettext_lazy as _
 from django.urls import reverse
 
@@ -158,7 +159,11 @@ class Transaction(models.Model):
     )
 
     amount = models.DecimalField(_('amount'), max_digits=50, decimal_places=2)
-    datetime = models.DateTimeField(_('date and time'), default=datetime.now)
+    datetime = models.DateTimeField(
+        _('date and time'),
+        default=timezone.now,
+        validators=(MaxValueValidator(timezone.now),)
+    )
     comment = models.TextField(_('comment'), blank=True)
     receipt = models.ImageField(
         _('receipt'),
