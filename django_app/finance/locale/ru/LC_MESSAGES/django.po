@@ -157,7 +157,7 @@ msgstr "Создание категории транзакций списани�
 
 #: finance/views.py:99
 msgid "Create debit transaction"
-msgstr "Создание транзакции списания"
+msgstr "Добавление дохода"
 
 #: finance/views.py:105
 msgid "Transaction debit was created successfully"
