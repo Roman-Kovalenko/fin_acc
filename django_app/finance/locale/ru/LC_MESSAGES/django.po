@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-01 18:00+0400\n"
+"POT-Creation-Date: 2021-07-01 18:52+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,200 +20,209 @@ msgstr ""
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
 "%100>=11 && n%100<=14)? 2 : 3);\n"
 
-#: django_app/finance/forms.py:49 django_app/finance/forms.py:79
-#: django_app/finance/forms.py:112
+#: finance/forms.py:49 finance/forms.py:79 finance/forms.py:112
 msgid "Only positive allowed"
 msgstr "Разрешены только положительные"
 
-#: django_app/finance/forms.py:51 django_app/finance/forms.py:81
-#: django_app/finance/forms.py:114
+#: finance/forms.py:51 finance/forms.py:81 finance/forms.py:114
 msgid "Only negative allowed"
 msgstr "Разрешены только отрицательные"
 
-#: django_app/finance/models.py:30 django_app/finance/models.py:48
-#: django_app/finance/models.py:87
+#: finance/models.py:30 finance/models.py:48 finance/models.py:87
 msgid "name"
 msgstr "название"
 
-#: django_app/finance/models.py:38 django_app/finance/models.py:83
-#: django_app/finance/models.py:149
+#: finance/models.py:38 finance/models.py:83 finance/models.py:149
 msgid "currency"
 msgstr "валюта"
 
-#: django_app/finance/models.py:39
+#: finance/models.py:39
 msgid "currencies"
 msgstr "валюты"
 
-#: django_app/finance/models.py:49
+#: finance/models.py:49
 msgid "is debit"
 msgstr "это дебет"
 
-#: django_app/finance/models.py:57
+#: finance/models.py:57
 msgid "transaction category"
 msgstr "категория транзакций"
 
-#: django_app/finance/models.py:58
+#: finance/models.py:58
 msgid "transaction categories"
 msgstr "категории транзакций"
 
-#: django_app/finance/models.py:70 django_app/finance/models.py:136
+#: finance/models.py:70 finance/models.py:136
 msgid "user"
 msgstr "пользователь"
 
-#: django_app/finance/models.py:76 django_app/finance/models.py:142
+#: finance/models.py:76 finance/models.py:142
 msgid "category"
 msgstr "категория"
 
-#: django_app/finance/models.py:88
+#: finance/models.py:88
 msgid "start date"
 msgstr "начальная дата"
 
-#: django_app/finance/models.py:90
+#: finance/models.py:90
 msgid "end date"
 msgstr "конечная дата"
 
-#: django_app/finance/models.py:97
+#: finance/models.py:97
 msgid "pay day"
 msgstr "день платежа"
 
-#: django_app/finance/models.py:103 django_app/finance/models.py:161
+#: finance/models.py:103 finance/models.py:161
 msgid "amount"
 msgstr "сумма"
 
-#: django_app/finance/models.py:104 django_app/finance/models.py:167
+#: finance/models.py:104 finance/models.py:167
 msgid "comment"
 msgstr "комментарий"
 
-#: django_app/finance/models.py:125 django_app/finance/models.py:155
+#: finance/models.py:125 finance/models.py:155
 msgid "periodic transaction"
 msgstr "повторяющаяся транзакция"
 
-#: django_app/finance/models.py:126
+#: finance/models.py:126
 msgid "periodic transactions"
 msgstr "повторяющиеся транзакции"
 
-#: django_app/finance/models.py:163
+#: finance/models.py:163
 msgid "date and time"
 msgstr "дата и время"
 
-#: django_app/finance/models.py:169
+#: finance/models.py:169
 msgid "receipt"
 msgstr "чек"
 
-#: django_app/finance/models.py:194
+#: finance/models.py:194
 msgid "transaction"
 msgstr "транзакция"
 
-#: django_app/finance/models.py:195
+#: finance/models.py:195
 msgid "transactions"
 msgstr "транзакции"
 
-#: django_app/finance/tables.py:15 django_app/finance/tables.py:49
-#: django_app/finance/tables.py:86
+#: finance/tables.py:15 finance/tables.py:49 finance/tables.py:86
 msgid "actions"
 msgstr "действия"
 
-#: django_app/finance/tables.py:82
+#: finance/tables.py:82
 msgid "paid"
 msgstr "оплачено"
 
-#: django_app/finance/tables.py:83
+#: finance/tables.py:83
 msgid "unpaid"
 msgstr "не оплачено"
 
-#: django_app/finance/templates/finance/filtered_table.html:26
+#: finance/templates/finance/filtered_table.html:38
 msgid "Delete transaction?"
 msgstr "Удалить транзакцию?"
 
-#: django_app/finance/templates/finance/filtered_table.html:37
-#: django_app/finance/templates/finance/transaction_form.html:36
+#: finance/templates/finance/filtered_table.html:45
+msgid "Delete"
+msgstr "Удалить"
+
+#: finance/templates/finance/filtered_table.html:50
+#: finance/templates/finance/transaction_form.html:48
 msgid "Cancel"
 msgstr "Отмена"
 
-#: django_app/finance/templates/finance/transaction_form.html:31
+#: finance/templates/finance/periodictransaction_form.html:17
+#: finance/templates/finance/transaction_form.html:18
+msgid "OK"
+msgstr "Ок"
+
+#: finance/templates/finance/periodictransaction_form.html:18
+#: finance/templates/finance/transaction_form.html:19
+msgid "Clear"
+msgstr "Очистить"
+
+#: finance/templates/finance/transaction_form.html:43
 msgid "Create"
 msgstr "Создать"
 
-#: django_app/finance/views.py:46
+#: finance/views.py:46
 msgid "Transaction category was created successfully"
 msgstr "Категория транзакций успешно создана"
 
-#: django_app/finance/views.py:58 django_app/finance/views.py:101
+#: finance/views.py:58 finance/views.py:101
 msgid "Create debit transaction category"
 msgstr "Создание категории транзакций прихода"
 
-#: django_app/finance/views.py:69 django_app/finance/views.py:118
+#: finance/views.py:69 finance/views.py:118
 msgid "Create credit transaction category"
 msgstr "Создание категории транзакций списания"
 
-#: django_app/finance/views.py:99
+#: finance/views.py:99
 msgid "Create debit transaction"
 msgstr "Создание транзакции прихода"
 
-#: django_app/finance/views.py:105
+#: finance/views.py:105
 msgid "Transaction debit was created successfully"
 msgstr "Транзакция прихода успешно создана"
 
-#: django_app/finance/views.py:116 django_app/finance/views.py:269
+#: finance/views.py:116 finance/views.py:269
 msgid "Create credit transaction"
 msgstr "Создание транзакции списания"
 
-#: django_app/finance/views.py:122 django_app/finance/views.py:270
+#: finance/views.py:122 finance/views.py:270
 msgid "Transaction credit was created successfully"
 msgstr "Транзакция списания успешно создана"
 
-#: django_app/finance/views.py:132
+#: finance/views.py:132
 msgid "Update debit transaction"
 msgstr "Редактировать транзакцию прихода"
 
-#: django_app/finance/views.py:133
+#: finance/views.py:133
 msgid "Transaction debit was updated successfully"
 msgstr "Транзакция прихода успешно отредактирована"
 
-#: django_app/finance/views.py:143
+#: finance/views.py:143
 msgid "Update credit transaction"
 msgstr "Редактировать транзакцию списания"
 
-#: django_app/finance/views.py:144
+#: finance/views.py:144
 msgid "Transaction credit was updated successfully"
 msgstr "Транзакция списания успешно отредактирована"
 
-#: django_app/finance/views.py:153
+#: finance/views.py:153
 msgid "Transaction was deleted"
 msgstr "Транзакция удалена"
 
-#: django_app/finance/views.py:166
+#: finance/views.py:166
 msgid "Transaction table with filter"
 msgstr "Таблица транзакций с фильтрацией"
 
-#: django_app/finance/views.py:180
+#: finance/views.py:180
 msgid "Main page"
 msgstr "Основная страница"
 
-#: django_app/finance/views.py:236
+#: finance/views.py:236
 msgid "Create credit periodic transaction"
 msgstr "Создание повторяющейся транзакции списания"
 
-#: django_app/finance/views.py:237
+#: finance/views.py:237
 msgid "Periodic transaction credit was created successfully"
 msgstr "Повторяющаяся транзакция списания успешно создана"
 
-#: django_app/finance/views.py:247
+#: finance/views.py:247
 msgid "Update credit periodic transaction"
 msgstr "Редактирование повторяющейся транзакции списания"
 
-#: django_app/finance/views.py:248
+#: finance/views.py:248
 msgid "Periodic transaction credit was updated successfully"
 msgstr "Повторяющаяся транзакция списания успешно отредактирована"
 
-#: django_app/finance/views.py:258
+#: finance/views.py:258
 msgid "Periodic transaction was deleted"
 msgstr "Повторяющаяся транзакция удалена"
 
-#: django_app/finance/views.py:297
+#: finance/views.py:297
 msgid "Periodic transaction table with filter"
 msgstr "Таблица повторяющихся транзакций с фильтрацией"
 
-#: django_app/finance/views.py:309
+#: finance/views.py:309
 msgid "Cost statistics"
 msgstr "Статистика расходов"
