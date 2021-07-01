@@ -1,13 +1,25 @@
 {% extends 'base.html' %}
 
+{% load i18n %}
 {% load django_bootstrap5 %}
 
 {% block content %}
-  <form method="post" enctype="multipart/form-data">
+  <form method="post" class="section mb-5 p-2" enctype="multipart/form-data">
     {% csrf_token %}
-    {% bootstrap_form form %}
+    <div class="card">
+      <div class="card-body">
+        {% bootstrap_form form label_class='label' wrapper_class='form-group basic input-wrapper' %} 
+      </div>
+    </div>
 
-    {% bootstrap_button button_type="submit" content="OK" %}
-    {% bootstrap_button button_type="reset" content="Cancel" %}
+    <div class="card my-2">
+      <div class="card-body align-items-center d-flex justify-content-center">
+        {% translate 'OK' as ok_text %}
+        {% translate 'Clear' as clear_text %}
+
+        {% bootstrap_button button_type="submit" button_class='btn btn-primary mx-1 btn-block' content=ok_text %}
+        {% bootstrap_button button_type="reset" button_class='btn btn-primary mx-1 btn-block' content=clear_text %}
+      </div>
+    </div>
   </form>
 {% endblock %}
