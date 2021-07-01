@@ -20,6 +20,7 @@ Highcharts.chart('pie_chart_container', {
     },
     plotOptions: {
         pie: {
+            size: 190,
             allowPointSelect: true,
             cursor: 'pointer',
             dataLabels: {

@@ -1,0 +1,7502 @@
+[
+{
+  "model": "users.customuser",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$260000$iZ4InS6Ja9tHZBgiS3Z3u0$tMM9YQYMZ8ZUP1edI5rVxSXJ1+VhvPmRE3fbVRCclq8=",
+    "last_login": "2021-07-01T21:10:48.749Z",
+    "is_superuser": false,
+    "email": "example@example.com",
+    "surname": "Тестов",
+    "name": "Тест",
+    "patronymic": "Тестович",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2021-07-01T21:10:33.524Z",
+    "initial_amount": "0.00",
+    "current_amount": "0.00",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "finance.currency",
+  "pk": 1,
+  "fields": {
+    "name": "Рубль"
+  }
+},
+{
+  "model": "finance.transactioncategory",
+  "pk": 1,
+  "fields": {
+    "name": "Заработная плата",
+    "is_debit": true
+  }
+},
+{
+  "model": "finance.transactioncategory",
+  "pk": 2,
+  "fields": {
+    "name": "Пенсия",
+    "is_debit": true
+  }
+},
+{
+  "model": "finance.transactioncategory",
+  "pk": 3,
+  "fields": {
+    "name": "Стипендия",
+    "is_debit": true
+  }
+},
+{
+  "model": "finance.transactioncategory",
+  "pk": 4,
+  "fields": {
+    "name": "Призовые / выигрыши",
+    "is_debit": true
+  }
+},
+{
+  "model": "finance.transactioncategory",
+  "pk": 5,
+  "fields": {
+    "name": "Деньги от сдачи в аренду",
+    "is_debit": true
+  }
+},
+{
+  "model": "finance.transactioncategory",
+  "pk": 6,
+  "fields": {
+    "name": "Кэшбэки и % от банков",
+    "is_debit": true
+  }
+},
+{
+  "model": "finance.transactioncategory",
+  "pk": 7,
+  "fields": {
+    "name": "Инвестиции",
+    "is_debit": true
+  }
+},
+{
+  "model": "finance.transactioncategory",
+  "pk": 8,
+  "fields": {
+    "name": "Подарки",
+    "is_debit": true
+  }
+},
+{
+  "model": "finance.transactioncategory",
+  "pk": 9,
+  "fields": {
+    "name": "Продукты",
+    "is_debit": false
+  }
+},
+{
+  "model": "finance.transactioncategory",
+  "pk": 10,
+  "fields": {
+    "name": "Кафе и рестораны",
+    "is_debit": false
+  }
+},
+{
+  "model": "finance.transactioncategory",
+  "pk": 11,
+  "fields": {
+    "name": "Обучение",
+    "is_debit": false
+  }
+},
+{
+  "model": "finance.transactioncategory",
+  "pk": 12,
+  "fields": {
+    "name": "Развлечения",
+    "is_debit": false
+  }
+},
+{
+  "model": "finance.transactioncategory",
+  "pk": 13,
+  "fields": {
+    "name": "Путешествия",
+    "is_debit": false
+  }
+},
+{
+  "model": "finance.transactioncategory",
+  "pk": 14,
+  "fields": {
+    "name": "Здоровье и фитнес",
+    "is_debit": false
+  }
+},
+{
+  "model": "finance.transactioncategory",
+  "pk": 15,
+  "fields": {
+    "name": "Аптеки",
+    "is_debit": false
+  }
+},
+{
+  "model": "finance.transactioncategory",
+  "pk": 16,
+  "fields": {
+    "name": "Красота",
+    "is_debit": false
+  }
+},
+{
+  "model": "finance.transactioncategory",
+  "pk": 17,
+  "fields": {
+    "name": "Одежда и обувь",
+    "is_debit": false
+  }
+},
+{
+  "model": "finance.transactioncategory",
+  "pk": 18,
+  "fields": {
+    "name": "Общественный транспорт",
+    "is_debit": false
+  }
+},
+{
+  "model": "finance.transactioncategory",
+  "pk": 19,
+  "fields": {
+    "name": "Такси",
+    "is_debit": false
+  }
+},
+{
+  "model": "finance.transactioncategory",
+  "pk": 20,
+  "fields": {
+    "name": "Машина",
+    "is_debit": false
+  }
+},
+{
+  "model": "finance.transactioncategory",
+  "pk": 21,
+  "fields": {
+    "name": "Детские товары",
+    "is_debit": false
+  }
+},
+{
+  "model": "finance.transactioncategory",
+  "pk": 22,
+  "fields": {
+    "name": "Товары для животных",
+    "is_debit": false
+  }
+},
+{
+  "model": "finance.transactioncategory",
+  "pk": 23,
+  "fields": {
+    "name": "Электроника и техника",
+    "is_debit": false
+  }
+},
+{
+  "model": "finance.transactioncategory",
+  "pk": 24,
+  "fields": {
+    "name": "Ипотека",
+    "is_debit": false
+  }
+},
+{
+  "model": "finance.periodictransaction",
+  "pk": 1,
+  "fields": {
+    "user": 1,
+    "category": 24,
+    "currency": 1,
+    "name": "Ипотека за студию",
+    "start_date": "2020-01-01",
+    "end_date": "2040-01-01",
+    "pay_day": 15,
+    "amount": "-15000.00",
+    "comment": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 1,
+  "fields": {
+    "user": 1,
+    "category": 15,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1488.00",
+    "datetime": "2020-01-01T06:19:24Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 2,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-451.00",
+    "datetime": "2020-01-01T11:42:48Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 3,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1037.00",
+    "datetime": "2020-01-02T12:08:16Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 4,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-548.00",
+    "datetime": "2020-01-03T21:01:58Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 5,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-403.00",
+    "datetime": "2020-01-03T22:48:33Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 6,
+  "fields": {
+    "user": 1,
+    "category": 16,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1488.00",
+    "datetime": "2020-01-04T11:58:39Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 7,
+  "fields": {
+    "user": 1,
+    "category": 19,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1488.00",
+    "datetime": "2020-01-05T07:36:37Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 8,
+  "fields": {
+    "user": 1,
+    "category": 12,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1488.00",
+    "datetime": "2020-01-07T19:58:52Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 9,
+  "fields": {
+    "user": 1,
+    "category": 17,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1488.00",
+    "datetime": "2020-01-08T06:16:17Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 10,
+  "fields": {
+    "user": 1,
+    "category": 16,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1488.00",
+    "datetime": "2020-01-08T15:21:28Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 11,
+  "fields": {
+    "user": 1,
+    "category": 23,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1488.00",
+    "datetime": "2020-01-09T04:51:21Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 12,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1488.00",
+    "datetime": "2020-01-09T20:33:05Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 13,
+  "fields": {
+    "user": 1,
+    "category": 18,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1488.00",
+    "datetime": "2020-01-11T02:42:55Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 14,
+  "fields": {
+    "user": 1,
+    "category": 23,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1488.00",
+    "datetime": "2020-01-11T23:22:37Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 15,
+  "fields": {
+    "user": 1,
+    "category": 12,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1488.00",
+    "datetime": "2020-01-12T19:26:24Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 16,
+  "fields": {
+    "user": 1,
+    "category": 1,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "56000.00",
+    "datetime": "2020-01-12T20:00:00Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 17,
+  "fields": {
+    "user": 1,
+    "category": 24,
+    "currency": 1,
+    "periodic_transaction": 1,
+    "amount": "-15000.00",
+    "datetime": "2020-01-14T01:10:09Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 18,
+  "fields": {
+    "user": 1,
+    "category": 18,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1488.00",
+    "datetime": "2020-01-16T12:14:24Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 19,
+  "fields": {
+    "user": 1,
+    "category": 11,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1488.00",
+    "datetime": "2020-01-18T03:37:15Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 20,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1249.00",
+    "datetime": "2020-01-19T04:58:14Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 21,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-716.00",
+    "datetime": "2020-01-20T11:26:28Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 22,
+  "fields": {
+    "user": 1,
+    "category": 16,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1488.00",
+    "datetime": "2020-01-20T13:32:03Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 23,
+  "fields": {
+    "user": 1,
+    "category": 18,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1488.00",
+    "datetime": "2020-01-20T14:44:14Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 24,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-477.00",
+    "datetime": "2020-01-22T17:27:14Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 25,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-830.00",
+    "datetime": "2020-01-23T01:25:20Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 26,
+  "fields": {
+    "user": 1,
+    "category": 23,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1488.00",
+    "datetime": "2020-01-25T10:10:34Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 27,
+  "fields": {
+    "user": 1,
+    "category": 23,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1488.00",
+    "datetime": "2020-01-26T11:50:27Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 28,
+  "fields": {
+    "user": 1,
+    "category": 1,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "24000.00",
+    "datetime": "2020-01-27T20:00:00Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 29,
+  "fields": {
+    "user": 1,
+    "category": 11,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1488.00",
+    "datetime": "2020-01-28T14:01:08Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 30,
+  "fields": {
+    "user": 1,
+    "category": 7,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "3226.00",
+    "datetime": "2020-01-28T16:18:47Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 31,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-888.00",
+    "datetime": "2020-02-01T09:14:24Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 32,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-780.00",
+    "datetime": "2020-02-01T21:02:35Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 33,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1144.00",
+    "datetime": "2020-02-01T22:48:18Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 34,
+  "fields": {
+    "user": 1,
+    "category": 12,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1333.00",
+    "datetime": "2020-02-02T08:27:28Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 35,
+  "fields": {
+    "user": 1,
+    "category": 23,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1333.00",
+    "datetime": "2020-02-02T17:08:45Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 36,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-913.00",
+    "datetime": "2020-02-03T00:58:26Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 37,
+  "fields": {
+    "user": 1,
+    "category": 15,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1333.00",
+    "datetime": "2020-02-03T16:18:50Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 38,
+  "fields": {
+    "user": 1,
+    "category": 24,
+    "currency": 1,
+    "periodic_transaction": 1,
+    "amount": "-15000.00",
+    "datetime": "2020-02-04T04:10:48Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 39,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1333.00",
+    "datetime": "2020-02-04T14:43:42Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 40,
+  "fields": {
+    "user": 1,
+    "category": 16,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1333.00",
+    "datetime": "2020-02-04T15:03:33Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 41,
+  "fields": {
+    "user": 1,
+    "category": 17,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1333.00",
+    "datetime": "2020-02-05T12:02:55Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 42,
+  "fields": {
+    "user": 1,
+    "category": 23,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1333.00",
+    "datetime": "2020-02-05T15:25:26Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 43,
+  "fields": {
+    "user": 1,
+    "category": 18,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1333.00",
+    "datetime": "2020-02-06T08:11:38Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 44,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-599.00",
+    "datetime": "2020-02-06T11:42:31Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 45,
+  "fields": {
+    "user": 1,
+    "category": 23,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1333.00",
+    "datetime": "2020-02-08T03:25:22Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 46,
+  "fields": {
+    "user": 1,
+    "category": 15,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1333.00",
+    "datetime": "2020-02-09T08:38:53Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 47,
+  "fields": {
+    "user": 1,
+    "category": 10,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1333.00",
+    "datetime": "2020-02-09T16:21:10Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 48,
+  "fields": {
+    "user": 1,
+    "category": 1,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "56000.00",
+    "datetime": "2020-02-12T20:00:00Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 49,
+  "fields": {
+    "user": 1,
+    "category": 12,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1333.00",
+    "datetime": "2020-02-17T03:04:04Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 50,
+  "fields": {
+    "user": 1,
+    "category": 16,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1333.00",
+    "datetime": "2020-02-17T12:30:26Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 51,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1310.00",
+    "datetime": "2020-02-19T14:29:13Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 52,
+  "fields": {
+    "user": 1,
+    "category": 18,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1333.00",
+    "datetime": "2020-02-19T15:36:43Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 53,
+  "fields": {
+    "user": 1,
+    "category": 10,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1333.00",
+    "datetime": "2020-02-19T17:52:14Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 54,
+  "fields": {
+    "user": 1,
+    "category": 4,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "1241.00",
+    "datetime": "2020-02-23T06:29:24Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 55,
+  "fields": {
+    "user": 1,
+    "category": 11,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1333.00",
+    "datetime": "2020-02-24T00:20:16Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 56,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-992.00",
+    "datetime": "2020-02-25T20:35:47Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 57,
+  "fields": {
+    "user": 1,
+    "category": 1,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "24000.00",
+    "datetime": "2020-02-27T20:00:00Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 58,
+  "fields": {
+    "user": 1,
+    "category": 19,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1333.00",
+    "datetime": "2020-02-28T03:44:04Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 59,
+  "fields": {
+    "user": 1,
+    "category": 16,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-977.00",
+    "datetime": "2020-03-01T18:22:13Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 60,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1013.00",
+    "datetime": "2020-03-01T18:59:36Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 61,
+  "fields": {
+    "user": 1,
+    "category": 18,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-977.00",
+    "datetime": "2020-03-02T14:33:58Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 62,
+  "fields": {
+    "user": 1,
+    "category": 16,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-977.00",
+    "datetime": "2020-03-02T16:10:49Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 63,
+  "fields": {
+    "user": 1,
+    "category": 24,
+    "currency": 1,
+    "periodic_transaction": 1,
+    "amount": "-15000.00",
+    "datetime": "2020-03-02T19:44:05Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 64,
+  "fields": {
+    "user": 1,
+    "category": 4,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "2791.00",
+    "datetime": "2020-03-03T04:53:04Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 65,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1082.00",
+    "datetime": "2020-03-04T06:17:44Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 66,
+  "fields": {
+    "user": 1,
+    "category": 10,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-977.00",
+    "datetime": "2020-03-04T09:14:30Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 67,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-647.00",
+    "datetime": "2020-03-07T02:28:23Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 68,
+  "fields": {
+    "user": 1,
+    "category": 10,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-977.00",
+    "datetime": "2020-03-08T07:53:47Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 69,
+  "fields": {
+    "user": 1,
+    "category": 16,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-977.00",
+    "datetime": "2020-03-09T01:27:21Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 70,
+  "fields": {
+    "user": 1,
+    "category": 19,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-977.00",
+    "datetime": "2020-03-10T00:12:50Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 71,
+  "fields": {
+    "user": 1,
+    "category": 15,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-977.00",
+    "datetime": "2020-03-11T00:32:42Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 72,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1295.00",
+    "datetime": "2020-03-12T19:36:11Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 73,
+  "fields": {
+    "user": 1,
+    "category": 1,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "56000.00",
+    "datetime": "2020-03-12T20:00:00Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 74,
+  "fields": {
+    "user": 1,
+    "category": 18,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-977.00",
+    "datetime": "2020-03-13T20:23:58Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 75,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1343.00",
+    "datetime": "2020-03-14T01:46:44Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 76,
+  "fields": {
+    "user": 1,
+    "category": 19,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-977.00",
+    "datetime": "2020-03-14T18:30:47Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 77,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-675.00",
+    "datetime": "2020-03-14T19:03:59Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 78,
+  "fields": {
+    "user": 1,
+    "category": 18,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-977.00",
+    "datetime": "2020-03-15T14:00:29Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 79,
+  "fields": {
+    "user": 1,
+    "category": 14,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-977.00",
+    "datetime": "2020-03-19T04:29:37Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 80,
+  "fields": {
+    "user": 1,
+    "category": 10,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-977.00",
+    "datetime": "2020-03-20T21:12:08Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 81,
+  "fields": {
+    "user": 1,
+    "category": 11,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-977.00",
+    "datetime": "2020-03-21T03:12:06Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 82,
+  "fields": {
+    "user": 1,
+    "category": 18,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-977.00",
+    "datetime": "2020-03-21T12:05:17Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 83,
+  "fields": {
+    "user": 1,
+    "category": 15,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-977.00",
+    "datetime": "2020-03-22T12:38:07Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 84,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-977.00",
+    "datetime": "2020-03-26T16:48:47Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 85,
+  "fields": {
+    "user": 1,
+    "category": 1,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "24000.00",
+    "datetime": "2020-03-27T20:00:00Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 86,
+  "fields": {
+    "user": 1,
+    "category": 23,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-977.00",
+    "datetime": "2020-03-28T03:09:43Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 87,
+  "fields": {
+    "user": 1,
+    "category": 10,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-741.00",
+    "datetime": "2020-04-02T00:50:49Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 88,
+  "fields": {
+    "user": 1,
+    "category": 17,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-741.00",
+    "datetime": "2020-04-02T05:52:18Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 89,
+  "fields": {
+    "user": 1,
+    "category": 14,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-741.00",
+    "datetime": "2020-04-03T21:08:36Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 90,
+  "fields": {
+    "user": 1,
+    "category": 23,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-741.00",
+    "datetime": "2020-04-04T20:25:10Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 91,
+  "fields": {
+    "user": 1,
+    "category": 10,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-741.00",
+    "datetime": "2020-04-04T21:52:58Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 92,
+  "fields": {
+    "user": 1,
+    "category": 24,
+    "currency": 1,
+    "periodic_transaction": 1,
+    "amount": "-15000.00",
+    "datetime": "2020-04-04T22:01:16Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 93,
+  "fields": {
+    "user": 1,
+    "category": 16,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-741.00",
+    "datetime": "2020-04-07T20:00:52Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 94,
+  "fields": {
+    "user": 1,
+    "category": 10,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-741.00",
+    "datetime": "2020-04-09T14:34:35Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 95,
+  "fields": {
+    "user": 1,
+    "category": 23,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-741.00",
+    "datetime": "2020-04-09T23:59:12Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 96,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-741.00",
+    "datetime": "2020-04-12T15:32:41Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 97,
+  "fields": {
+    "user": 1,
+    "category": 1,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "56000.00",
+    "datetime": "2020-04-12T20:00:00Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 98,
+  "fields": {
+    "user": 1,
+    "category": 23,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-741.00",
+    "datetime": "2020-04-12T22:32:45Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 99,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1029.00",
+    "datetime": "2020-04-14T08:32:48Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 100,
+  "fields": {
+    "user": 1,
+    "category": 12,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-741.00",
+    "datetime": "2020-04-14T16:06:13Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 101,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-944.00",
+    "datetime": "2020-04-15T13:05:52Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 102,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1204.00",
+    "datetime": "2020-04-16T08:59:11Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 103,
+  "fields": {
+    "user": 1,
+    "category": 19,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-741.00",
+    "datetime": "2020-04-16T22:22:50Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 104,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-719.00",
+    "datetime": "2020-04-17T16:54:11Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 105,
+  "fields": {
+    "user": 1,
+    "category": 12,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-741.00",
+    "datetime": "2020-04-18T03:03:46Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 106,
+  "fields": {
+    "user": 1,
+    "category": 23,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-741.00",
+    "datetime": "2020-04-18T15:59:15Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 107,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1241.00",
+    "datetime": "2020-04-18T19:51:53Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 108,
+  "fields": {
+    "user": 1,
+    "category": 11,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-741.00",
+    "datetime": "2020-04-21T21:53:00Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 109,
+  "fields": {
+    "user": 1,
+    "category": 10,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-741.00",
+    "datetime": "2020-04-23T12:24:44Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 110,
+  "fields": {
+    "user": 1,
+    "category": 16,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-741.00",
+    "datetime": "2020-04-24T00:18:50Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 111,
+  "fields": {
+    "user": 1,
+    "category": 19,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-741.00",
+    "datetime": "2020-04-24T08:29:11Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 112,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-753.00",
+    "datetime": "2020-04-24T08:55:10Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 113,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-348.00",
+    "datetime": "2020-04-24T14:32:19Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 114,
+  "fields": {
+    "user": 1,
+    "category": 1,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "24000.00",
+    "datetime": "2020-04-27T20:00:00Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 115,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-752.00",
+    "datetime": "2020-04-28T10:33:08Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 116,
+  "fields": {
+    "user": 1,
+    "category": 6,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "2918.00",
+    "datetime": "2020-04-28T11:51:52Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 117,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-771.00",
+    "datetime": "2020-05-02T04:34:52Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 118,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-465.00",
+    "datetime": "2020-05-02T21:56:20Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 119,
+  "fields": {
+    "user": 1,
+    "category": 12,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-771.00",
+    "datetime": "2020-05-04T02:26:44Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 120,
+  "fields": {
+    "user": 1,
+    "category": 24,
+    "currency": 1,
+    "periodic_transaction": 1,
+    "amount": "-15000.00",
+    "datetime": "2020-05-04T10:00:56Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 121,
+  "fields": {
+    "user": 1,
+    "category": 16,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-771.00",
+    "datetime": "2020-05-04T15:12:57Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 122,
+  "fields": {
+    "user": 1,
+    "category": 18,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-771.00",
+    "datetime": "2020-05-04T16:08:26Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 123,
+  "fields": {
+    "user": 1,
+    "category": 11,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-771.00",
+    "datetime": "2020-05-05T08:44:15Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 124,
+  "fields": {
+    "user": 1,
+    "category": 17,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-771.00",
+    "datetime": "2020-05-06T01:49:35Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 125,
+  "fields": {
+    "user": 1,
+    "category": 11,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-771.00",
+    "datetime": "2020-05-06T17:49:03Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 126,
+  "fields": {
+    "user": 1,
+    "category": 19,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-771.00",
+    "datetime": "2020-05-06T23:34:05Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 127,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1032.00",
+    "datetime": "2020-05-08T05:01:19Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 128,
+  "fields": {
+    "user": 1,
+    "category": 19,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-771.00",
+    "datetime": "2020-05-10T06:38:47Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 129,
+  "fields": {
+    "user": 1,
+    "category": 19,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-771.00",
+    "datetime": "2020-05-10T11:10:56Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 130,
+  "fields": {
+    "user": 1,
+    "category": 1,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "56000.00",
+    "datetime": "2020-05-12T20:00:00Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 131,
+  "fields": {
+    "user": 1,
+    "category": 15,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-771.00",
+    "datetime": "2020-05-13T09:08:10Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 132,
+  "fields": {
+    "user": 1,
+    "category": 12,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-771.00",
+    "datetime": "2020-05-16T16:13:15Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 133,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1329.00",
+    "datetime": "2020-05-17T00:34:06Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 134,
+  "fields": {
+    "user": 1,
+    "category": 14,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-771.00",
+    "datetime": "2020-05-17T02:25:07Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 135,
+  "fields": {
+    "user": 1,
+    "category": 11,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-771.00",
+    "datetime": "2020-05-18T13:21:06Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 136,
+  "fields": {
+    "user": 1,
+    "category": 19,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-771.00",
+    "datetime": "2020-05-19T04:47:30Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 137,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1164.00",
+    "datetime": "2020-05-20T06:19:17Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 138,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1396.00",
+    "datetime": "2020-05-20T20:22:56Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 139,
+  "fields": {
+    "user": 1,
+    "category": 7,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "4215.00",
+    "datetime": "2020-05-21T06:34:04Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 140,
+  "fields": {
+    "user": 1,
+    "category": 18,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-771.00",
+    "datetime": "2020-05-24T05:59:40Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 141,
+  "fields": {
+    "user": 1,
+    "category": 14,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-771.00",
+    "datetime": "2020-05-27T08:38:24Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 142,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1478.00",
+    "datetime": "2020-05-27T14:25:17Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 143,
+  "fields": {
+    "user": 1,
+    "category": 1,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "24000.00",
+    "datetime": "2020-05-27T20:00:00Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 144,
+  "fields": {
+    "user": 1,
+    "category": 16,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-771.00",
+    "datetime": "2020-05-28T01:25:36Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 145,
+  "fields": {
+    "user": 1,
+    "category": 17,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-771.00",
+    "datetime": "2020-05-28T07:56:02Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 146,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1239.00",
+    "datetime": "2020-06-01T00:36:01Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 147,
+  "fields": {
+    "user": 1,
+    "category": 12,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1239.00",
+    "datetime": "2020-06-01T01:05:40Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 148,
+  "fields": {
+    "user": 1,
+    "category": 8,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "4177.00",
+    "datetime": "2020-06-01T17:49:22Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 149,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1120.00",
+    "datetime": "2020-06-02T18:14:38Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 150,
+  "fields": {
+    "user": 1,
+    "category": 11,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1239.00",
+    "datetime": "2020-06-03T03:19:42Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 151,
+  "fields": {
+    "user": 1,
+    "category": 16,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1239.00",
+    "datetime": "2020-06-05T14:53:52Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 152,
+  "fields": {
+    "user": 1,
+    "category": 16,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1239.00",
+    "datetime": "2020-06-05T15:40:22Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 153,
+  "fields": {
+    "user": 1,
+    "category": 17,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1239.00",
+    "datetime": "2020-06-06T11:31:18Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 154,
+  "fields": {
+    "user": 1,
+    "category": 18,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1239.00",
+    "datetime": "2020-06-07T06:05:44Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 155,
+  "fields": {
+    "user": 1,
+    "category": 19,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1239.00",
+    "datetime": "2020-06-07T12:37:36Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 156,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1268.00",
+    "datetime": "2020-06-07T19:55:17Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 157,
+  "fields": {
+    "user": 1,
+    "category": 15,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1239.00",
+    "datetime": "2020-06-08T10:27:56Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 158,
+  "fields": {
+    "user": 1,
+    "category": 12,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1239.00",
+    "datetime": "2020-06-10T09:00:37Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 159,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-449.00",
+    "datetime": "2020-06-10T10:17:42Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 160,
+  "fields": {
+    "user": 1,
+    "category": 1,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "56000.00",
+    "datetime": "2020-06-12T20:00:00Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 161,
+  "fields": {
+    "user": 1,
+    "category": 24,
+    "currency": 1,
+    "periodic_transaction": 1,
+    "amount": "-15000.00",
+    "datetime": "2020-06-13T23:51:56Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 162,
+  "fields": {
+    "user": 1,
+    "category": 18,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1239.00",
+    "datetime": "2020-06-14T01:25:42Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 163,
+  "fields": {
+    "user": 1,
+    "category": 12,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1239.00",
+    "datetime": "2020-06-15T07:41:34Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 164,
+  "fields": {
+    "user": 1,
+    "category": 10,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1239.00",
+    "datetime": "2020-06-15T22:58:26Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 165,
+  "fields": {
+    "user": 1,
+    "category": 14,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1239.00",
+    "datetime": "2020-06-16T11:05:44Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 166,
+  "fields": {
+    "user": 1,
+    "category": 12,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1239.00",
+    "datetime": "2020-06-16T13:32:10Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 167,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1112.00",
+    "datetime": "2020-06-16T13:32:46Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 168,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-546.00",
+    "datetime": "2020-06-20T05:42:27Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 169,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1073.00",
+    "datetime": "2020-06-21T13:00:11Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 170,
+  "fields": {
+    "user": 1,
+    "category": 19,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1239.00",
+    "datetime": "2020-06-23T05:35:11Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 171,
+  "fields": {
+    "user": 1,
+    "category": 18,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1239.00",
+    "datetime": "2020-06-24T22:21:20Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 172,
+  "fields": {
+    "user": 1,
+    "category": 1,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "24000.00",
+    "datetime": "2020-06-27T20:00:00Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 173,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1105.00",
+    "datetime": "2020-06-28T16:47:12Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 174,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1305.00",
+    "datetime": "2020-07-01T10:14:28Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 175,
+  "fields": {
+    "user": 1,
+    "category": 16,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-964.00",
+    "datetime": "2020-07-02T21:50:54Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 176,
+  "fields": {
+    "user": 1,
+    "category": 23,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-964.00",
+    "datetime": "2020-07-02T22:34:50Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 177,
+  "fields": {
+    "user": 1,
+    "category": 12,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-964.00",
+    "datetime": "2020-07-04T01:16:31Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 178,
+  "fields": {
+    "user": 1,
+    "category": 4,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "4422.00",
+    "datetime": "2020-07-04T04:12:55Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 179,
+  "fields": {
+    "user": 1,
+    "category": 24,
+    "currency": 1,
+    "periodic_transaction": 1,
+    "amount": "-15000.00",
+    "datetime": "2020-07-05T20:02:38Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 180,
+  "fields": {
+    "user": 1,
+    "category": 15,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-964.00",
+    "datetime": "2020-07-10T04:11:00Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 181,
+  "fields": {
+    "user": 1,
+    "category": 12,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-964.00",
+    "datetime": "2020-07-11T23:09:16Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 182,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-595.00",
+    "datetime": "2020-07-12T01:04:32Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 183,
+  "fields": {
+    "user": 1,
+    "category": 14,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-964.00",
+    "datetime": "2020-07-12T16:23:44Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 184,
+  "fields": {
+    "user": 1,
+    "category": 1,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "56000.00",
+    "datetime": "2020-07-12T20:00:00Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 185,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-829.00",
+    "datetime": "2020-07-12T21:56:55Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 186,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-648.00",
+    "datetime": "2020-07-13T03:56:50Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 187,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-401.00",
+    "datetime": "2020-07-13T04:31:24Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 188,
+  "fields": {
+    "user": 1,
+    "category": 23,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-964.00",
+    "datetime": "2020-07-13T05:54:07Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 189,
+  "fields": {
+    "user": 1,
+    "category": 14,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-964.00",
+    "datetime": "2020-07-13T14:01:08Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 190,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-940.00",
+    "datetime": "2020-07-13T17:15:42Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 191,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-964.00",
+    "datetime": "2020-07-15T09:47:27Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 192,
+  "fields": {
+    "user": 1,
+    "category": 18,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-964.00",
+    "datetime": "2020-07-16T12:06:28Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 193,
+  "fields": {
+    "user": 1,
+    "category": 23,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-964.00",
+    "datetime": "2020-07-17T23:37:18Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 194,
+  "fields": {
+    "user": 1,
+    "category": 23,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-964.00",
+    "datetime": "2020-07-18T09:23:30Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 195,
+  "fields": {
+    "user": 1,
+    "category": 19,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-964.00",
+    "datetime": "2020-07-26T19:51:09Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 196,
+  "fields": {
+    "user": 1,
+    "category": 10,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-964.00",
+    "datetime": "2020-07-27T06:22:07Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 197,
+  "fields": {
+    "user": 1,
+    "category": 15,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-964.00",
+    "datetime": "2020-07-27T15:36:28Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 198,
+  "fields": {
+    "user": 1,
+    "category": 1,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "24000.00",
+    "datetime": "2020-07-27T20:00:00Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 199,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-634.00",
+    "datetime": "2020-07-27T20:01:04Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 200,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-713.00",
+    "datetime": "2020-07-27T23:33:20Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 201,
+  "fields": {
+    "user": 1,
+    "category": 12,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-964.00",
+    "datetime": "2020-07-28T07:53:19Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 202,
+  "fields": {
+    "user": 1,
+    "category": 4,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "4066.00",
+    "datetime": "2020-08-01T00:08:39Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 203,
+  "fields": {
+    "user": 1,
+    "category": 23,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1161.00",
+    "datetime": "2020-08-01T06:51:57Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 204,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1479.00",
+    "datetime": "2020-08-01T11:16:07Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 205,
+  "fields": {
+    "user": 1,
+    "category": 10,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1161.00",
+    "datetime": "2020-08-04T16:19:25Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 206,
+  "fields": {
+    "user": 1,
+    "category": 19,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1161.00",
+    "datetime": "2020-08-05T13:08:04Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 207,
+  "fields": {
+    "user": 1,
+    "category": 10,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1161.00",
+    "datetime": "2020-08-06T00:55:04Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 208,
+  "fields": {
+    "user": 1,
+    "category": 12,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1161.00",
+    "datetime": "2020-08-06T03:26:15Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 209,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-323.00",
+    "datetime": "2020-08-07T17:42:53Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 210,
+  "fields": {
+    "user": 1,
+    "category": 18,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1161.00",
+    "datetime": "2020-08-08T17:54:44Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 211,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-394.00",
+    "datetime": "2020-08-10T16:41:50Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 212,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1161.00",
+    "datetime": "2020-08-11T06:08:11Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 213,
+  "fields": {
+    "user": 1,
+    "category": 24,
+    "currency": 1,
+    "periodic_transaction": 1,
+    "amount": "-15000.00",
+    "datetime": "2020-08-11T13:45:59Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 214,
+  "fields": {
+    "user": 1,
+    "category": 16,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1161.00",
+    "datetime": "2020-08-11T16:26:46Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 215,
+  "fields": {
+    "user": 1,
+    "category": 16,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1161.00",
+    "datetime": "2020-08-11T18:05:56Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 216,
+  "fields": {
+    "user": 1,
+    "category": 1,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "56000.00",
+    "datetime": "2020-08-12T20:00:00Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 217,
+  "fields": {
+    "user": 1,
+    "category": 17,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1161.00",
+    "datetime": "2020-08-13T03:54:26Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 218,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1259.00",
+    "datetime": "2020-08-13T17:29:08Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 219,
+  "fields": {
+    "user": 1,
+    "category": 23,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1161.00",
+    "datetime": "2020-08-14T06:55:55Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 220,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1451.00",
+    "datetime": "2020-08-15T04:45:49Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 221,
+  "fields": {
+    "user": 1,
+    "category": 17,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1161.00",
+    "datetime": "2020-08-15T20:52:35Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 222,
+  "fields": {
+    "user": 1,
+    "category": 16,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1161.00",
+    "datetime": "2020-08-16T10:19:22Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 223,
+  "fields": {
+    "user": 1,
+    "category": 18,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1161.00",
+    "datetime": "2020-08-20T09:30:20Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 224,
+  "fields": {
+    "user": 1,
+    "category": 19,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1161.00",
+    "datetime": "2020-08-21T05:40:41Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 225,
+  "fields": {
+    "user": 1,
+    "category": 18,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1161.00",
+    "datetime": "2020-08-23T04:25:51Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 226,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1220.00",
+    "datetime": "2020-08-25T01:43:44Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 227,
+  "fields": {
+    "user": 1,
+    "category": 17,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1161.00",
+    "datetime": "2020-08-25T12:14:55Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 228,
+  "fields": {
+    "user": 1,
+    "category": 19,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1161.00",
+    "datetime": "2020-08-26T10:53:16Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 229,
+  "fields": {
+    "user": 1,
+    "category": 1,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "24000.00",
+    "datetime": "2020-08-27T20:00:00Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 230,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-940.00",
+    "datetime": "2020-08-31T20:25:52Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 231,
+  "fields": {
+    "user": 1,
+    "category": 12,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-981.00",
+    "datetime": "2020-09-01T19:41:30Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 232,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-746.00",
+    "datetime": "2020-09-02T02:27:41Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 233,
+  "fields": {
+    "user": 1,
+    "category": 15,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-981.00",
+    "datetime": "2020-09-02T07:03:54Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 234,
+  "fields": {
+    "user": 1,
+    "category": 15,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-981.00",
+    "datetime": "2020-09-03T17:21:50Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 235,
+  "fields": {
+    "user": 1,
+    "category": 8,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "2982.00",
+    "datetime": "2020-09-04T07:35:29Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 236,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1261.00",
+    "datetime": "2020-09-07T02:49:12Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 237,
+  "fields": {
+    "user": 1,
+    "category": 24,
+    "currency": 1,
+    "periodic_transaction": 1,
+    "amount": "-15000.00",
+    "datetime": "2020-09-07T11:43:51Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 238,
+  "fields": {
+    "user": 1,
+    "category": 10,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-981.00",
+    "datetime": "2020-09-07T14:50:13Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 239,
+  "fields": {
+    "user": 1,
+    "category": 17,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-981.00",
+    "datetime": "2020-09-08T09:49:06Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 240,
+  "fields": {
+    "user": 1,
+    "category": 18,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-981.00",
+    "datetime": "2020-09-09T03:40:26Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 241,
+  "fields": {
+    "user": 1,
+    "category": 1,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "56000.00",
+    "datetime": "2020-09-12T20:00:00Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 242,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-571.00",
+    "datetime": "2020-09-16T15:47:23Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 243,
+  "fields": {
+    "user": 1,
+    "category": 23,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-981.00",
+    "datetime": "2020-09-17T15:04:04Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 244,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-981.00",
+    "datetime": "2020-09-18T03:51:28Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 245,
+  "fields": {
+    "user": 1,
+    "category": 14,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-981.00",
+    "datetime": "2020-09-18T08:39:59Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 246,
+  "fields": {
+    "user": 1,
+    "category": 16,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-981.00",
+    "datetime": "2020-09-18T11:36:50Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 247,
+  "fields": {
+    "user": 1,
+    "category": 23,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-981.00",
+    "datetime": "2020-09-18T14:11:48Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 248,
+  "fields": {
+    "user": 1,
+    "category": 10,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-981.00",
+    "datetime": "2020-09-20T09:41:17Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 249,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1482.00",
+    "datetime": "2020-09-20T18:28:27Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 250,
+  "fields": {
+    "user": 1,
+    "category": 19,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-981.00",
+    "datetime": "2020-09-21T18:26:42Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 251,
+  "fields": {
+    "user": 1,
+    "category": 23,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-981.00",
+    "datetime": "2020-09-22T00:12:24Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 252,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1457.00",
+    "datetime": "2020-09-22T03:06:29Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 253,
+  "fields": {
+    "user": 1,
+    "category": 16,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-981.00",
+    "datetime": "2020-09-23T17:59:20Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 254,
+  "fields": {
+    "user": 1,
+    "category": 11,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-981.00",
+    "datetime": "2020-09-24T05:20:12Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 255,
+  "fields": {
+    "user": 1,
+    "category": 23,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-981.00",
+    "datetime": "2020-09-25T15:56:16Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 256,
+  "fields": {
+    "user": 1,
+    "category": 1,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "24000.00",
+    "datetime": "2020-09-27T20:00:00Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 257,
+  "fields": {
+    "user": 1,
+    "category": 24,
+    "currency": 1,
+    "periodic_transaction": 1,
+    "amount": "-15000.00",
+    "datetime": "2020-10-01T00:28:29Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 258,
+  "fields": {
+    "user": 1,
+    "category": 11,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-797.00",
+    "datetime": "2020-10-01T04:50:31Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 259,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-861.00",
+    "datetime": "2020-10-04T07:21:41Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 260,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1115.00",
+    "datetime": "2020-10-04T22:14:43Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 261,
+  "fields": {
+    "user": 1,
+    "category": 12,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-797.00",
+    "datetime": "2020-10-05T15:26:42Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 262,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1359.00",
+    "datetime": "2020-10-06T10:46:50Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 263,
+  "fields": {
+    "user": 1,
+    "category": 10,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-797.00",
+    "datetime": "2020-10-07T09:29:43Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 264,
+  "fields": {
+    "user": 1,
+    "category": 17,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-797.00",
+    "datetime": "2020-10-07T15:45:19Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 265,
+  "fields": {
+    "user": 1,
+    "category": 23,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-797.00",
+    "datetime": "2020-10-09T10:05:53Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 266,
+  "fields": {
+    "user": 1,
+    "category": 19,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-797.00",
+    "datetime": "2020-10-10T21:15:32Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 267,
+  "fields": {
+    "user": 1,
+    "category": 4,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "1138.00",
+    "datetime": "2020-10-12T18:17:33Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 268,
+  "fields": {
+    "user": 1,
+    "category": 1,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "56000.00",
+    "datetime": "2020-10-12T20:00:00Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 269,
+  "fields": {
+    "user": 1,
+    "category": 12,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-797.00",
+    "datetime": "2020-10-13T06:46:35Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 270,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-789.00",
+    "datetime": "2020-10-17T03:14:14Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 271,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-394.00",
+    "datetime": "2020-10-17T20:32:57Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 272,
+  "fields": {
+    "user": 1,
+    "category": 16,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-797.00",
+    "datetime": "2020-10-18T11:44:18Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 273,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1276.00",
+    "datetime": "2020-10-19T14:01:10Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 274,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-502.00",
+    "datetime": "2020-10-19T23:44:34Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 275,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-797.00",
+    "datetime": "2020-10-21T11:36:42Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 276,
+  "fields": {
+    "user": 1,
+    "category": 15,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-797.00",
+    "datetime": "2020-10-21T15:52:02Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 277,
+  "fields": {
+    "user": 1,
+    "category": 18,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-797.00",
+    "datetime": "2020-10-22T11:26:27Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 278,
+  "fields": {
+    "user": 1,
+    "category": 17,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-797.00",
+    "datetime": "2020-10-24T07:20:28Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 279,
+  "fields": {
+    "user": 1,
+    "category": 16,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-797.00",
+    "datetime": "2020-10-24T14:07:51Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 280,
+  "fields": {
+    "user": 1,
+    "category": 17,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-797.00",
+    "datetime": "2020-10-24T22:57:46Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 281,
+  "fields": {
+    "user": 1,
+    "category": 16,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-797.00",
+    "datetime": "2020-10-26T05:36:17Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 282,
+  "fields": {
+    "user": 1,
+    "category": 14,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-797.00",
+    "datetime": "2020-10-26T19:59:10Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 283,
+  "fields": {
+    "user": 1,
+    "category": 18,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-797.00",
+    "datetime": "2020-10-26T21:01:03Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 284,
+  "fields": {
+    "user": 1,
+    "category": 1,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "24000.00",
+    "datetime": "2020-10-27T20:00:00Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 285,
+  "fields": {
+    "user": 1,
+    "category": 24,
+    "currency": 1,
+    "periodic_transaction": 1,
+    "amount": "-15000.00",
+    "datetime": "2020-11-02T21:27:02Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 286,
+  "fields": {
+    "user": 1,
+    "category": 17,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1084.00",
+    "datetime": "2020-11-04T21:25:52Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 287,
+  "fields": {
+    "user": 1,
+    "category": 17,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1084.00",
+    "datetime": "2020-11-07T06:52:43Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 288,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1263.00",
+    "datetime": "2020-11-07T11:17:24Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 289,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-414.00",
+    "datetime": "2020-11-07T21:20:02Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 290,
+  "fields": {
+    "user": 1,
+    "category": 16,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1084.00",
+    "datetime": "2020-11-08T02:46:51Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 291,
+  "fields": {
+    "user": 1,
+    "category": 10,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1084.00",
+    "datetime": "2020-11-08T05:53:22Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 292,
+  "fields": {
+    "user": 1,
+    "category": 18,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1084.00",
+    "datetime": "2020-11-09T18:08:10Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 293,
+  "fields": {
+    "user": 1,
+    "category": 23,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1084.00",
+    "datetime": "2020-11-10T13:01:04Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 294,
+  "fields": {
+    "user": 1,
+    "category": 10,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1084.00",
+    "datetime": "2020-11-10T17:07:32Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 295,
+  "fields": {
+    "user": 1,
+    "category": 16,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1084.00",
+    "datetime": "2020-11-11T09:52:05Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 296,
+  "fields": {
+    "user": 1,
+    "category": 12,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1084.00",
+    "datetime": "2020-11-12T17:15:09Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 297,
+  "fields": {
+    "user": 1,
+    "category": 1,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "56000.00",
+    "datetime": "2020-11-12T20:00:00Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 298,
+  "fields": {
+    "user": 1,
+    "category": 23,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1084.00",
+    "datetime": "2020-11-13T03:05:46Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 299,
+  "fields": {
+    "user": 1,
+    "category": 17,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1084.00",
+    "datetime": "2020-11-15T00:09:15Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 300,
+  "fields": {
+    "user": 1,
+    "category": 15,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1084.00",
+    "datetime": "2020-11-15T11:24:11Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 301,
+  "fields": {
+    "user": 1,
+    "category": 15,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1084.00",
+    "datetime": "2020-11-16T09:58:23Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 302,
+  "fields": {
+    "user": 1,
+    "category": 4,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "2207.00",
+    "datetime": "2020-11-16T18:15:10Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 303,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1153.00",
+    "datetime": "2020-11-18T08:27:03Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 304,
+  "fields": {
+    "user": 1,
+    "category": 12,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1084.00",
+    "datetime": "2020-11-20T03:01:28Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 305,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1084.00",
+    "datetime": "2020-11-20T18:38:35Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 306,
+  "fields": {
+    "user": 1,
+    "category": 18,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1084.00",
+    "datetime": "2020-11-21T19:10:55Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 307,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-538.00",
+    "datetime": "2020-11-24T18:54:28Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 308,
+  "fields": {
+    "user": 1,
+    "category": 15,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1084.00",
+    "datetime": "2020-11-25T06:31:37Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 309,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-894.00",
+    "datetime": "2020-11-25T11:03:01Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 310,
+  "fields": {
+    "user": 1,
+    "category": 14,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1084.00",
+    "datetime": "2020-11-25T22:19:38Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 311,
+  "fields": {
+    "user": 1,
+    "category": 18,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1084.00",
+    "datetime": "2020-11-27T02:16:40Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 312,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1438.00",
+    "datetime": "2020-11-27T16:30:07Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 313,
+  "fields": {
+    "user": 1,
+    "category": 1,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "24000.00",
+    "datetime": "2020-11-27T20:00:00Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 314,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-443.00",
+    "datetime": "2020-11-28T16:34:34Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 315,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-725.00",
+    "datetime": "2020-11-30T20:59:12Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 316,
+  "fields": {
+    "user": 1,
+    "category": 6,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "4107.00",
+    "datetime": "2020-12-02T09:29:47Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 317,
+  "fields": {
+    "user": 1,
+    "category": 10,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-885.00",
+    "datetime": "2020-12-02T23:47:31Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 318,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-985.00",
+    "datetime": "2020-12-03T02:26:56Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 319,
+  "fields": {
+    "user": 1,
+    "category": 15,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-885.00",
+    "datetime": "2020-12-03T07:49:12Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 320,
+  "fields": {
+    "user": 1,
+    "category": 11,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-885.00",
+    "datetime": "2020-12-03T11:43:49Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 321,
+  "fields": {
+    "user": 1,
+    "category": 24,
+    "currency": 1,
+    "periodic_transaction": 1,
+    "amount": "-15000.00",
+    "datetime": "2020-12-04T09:59:50Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 322,
+  "fields": {
+    "user": 1,
+    "category": 19,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-885.00",
+    "datetime": "2020-12-04T20:48:14Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 323,
+  "fields": {
+    "user": 1,
+    "category": 11,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-885.00",
+    "datetime": "2020-12-04T22:26:51Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 324,
+  "fields": {
+    "user": 1,
+    "category": 10,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-885.00",
+    "datetime": "2020-12-07T15:37:30Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 325,
+  "fields": {
+    "user": 1,
+    "category": 1,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "56000.00",
+    "datetime": "2020-12-12T20:00:00Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 326,
+  "fields": {
+    "user": 1,
+    "category": 16,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-885.00",
+    "datetime": "2020-12-15T03:15:51Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 327,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-885.00",
+    "datetime": "2020-12-16T11:50:33Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 328,
+  "fields": {
+    "user": 1,
+    "category": 18,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-885.00",
+    "datetime": "2020-12-16T13:48:56Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 329,
+  "fields": {
+    "user": 1,
+    "category": 10,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-885.00",
+    "datetime": "2020-12-16T20:37:48Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 330,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1002.00",
+    "datetime": "2020-12-17T14:47:35Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 331,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1424.00",
+    "datetime": "2020-12-17T18:46:11Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 332,
+  "fields": {
+    "user": 1,
+    "category": 11,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-885.00",
+    "datetime": "2020-12-18T15:40:28Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 333,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-420.00",
+    "datetime": "2020-12-19T10:20:46Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 334,
+  "fields": {
+    "user": 1,
+    "category": 17,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-885.00",
+    "datetime": "2020-12-20T05:39:05Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 335,
+  "fields": {
+    "user": 1,
+    "category": 18,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-885.00",
+    "datetime": "2020-12-20T09:28:05Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 336,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1247.00",
+    "datetime": "2020-12-21T08:53:52Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 337,
+  "fields": {
+    "user": 1,
+    "category": 19,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-885.00",
+    "datetime": "2020-12-21T23:26:28Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 338,
+  "fields": {
+    "user": 1,
+    "category": 12,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-885.00",
+    "datetime": "2020-12-22T05:50:19Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 339,
+  "fields": {
+    "user": 1,
+    "category": 12,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-885.00",
+    "datetime": "2020-12-22T19:02:39Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 340,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-542.00",
+    "datetime": "2020-12-24T04:57:23Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 341,
+  "fields": {
+    "user": 1,
+    "category": 15,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-885.00",
+    "datetime": "2020-12-26T10:31:19Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 342,
+  "fields": {
+    "user": 1,
+    "category": 19,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-885.00",
+    "datetime": "2020-12-27T00:53:22Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 343,
+  "fields": {
+    "user": 1,
+    "category": 1,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "24000.00",
+    "datetime": "2020-12-27T20:00:00Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 344,
+  "fields": {
+    "user": 1,
+    "category": 23,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-522.00",
+    "datetime": "2021-01-01T00:10:55Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 345,
+  "fields": {
+    "user": 1,
+    "category": 24,
+    "currency": 1,
+    "periodic_transaction": 1,
+    "amount": "-15000.00",
+    "datetime": "2021-01-06T08:44:39Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 346,
+  "fields": {
+    "user": 1,
+    "category": 10,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-522.00",
+    "datetime": "2021-01-06T17:23:13Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 347,
+  "fields": {
+    "user": 1,
+    "category": 12,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-522.00",
+    "datetime": "2021-01-06T17:37:19Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 348,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-766.00",
+    "datetime": "2021-01-07T03:37:49Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 349,
+  "fields": {
+    "user": 1,
+    "category": 18,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-522.00",
+    "datetime": "2021-01-10T07:45:30Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 350,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-866.00",
+    "datetime": "2021-01-10T21:10:33Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 351,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-500.00",
+    "datetime": "2021-01-11T03:35:53Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 352,
+  "fields": {
+    "user": 1,
+    "category": 10,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-522.00",
+    "datetime": "2021-01-11T05:22:14Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 353,
+  "fields": {
+    "user": 1,
+    "category": 18,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-522.00",
+    "datetime": "2021-01-11T16:10:53Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 354,
+  "fields": {
+    "user": 1,
+    "category": 12,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-522.00",
+    "datetime": "2021-01-12T05:45:28Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 355,
+  "fields": {
+    "user": 1,
+    "category": 1,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "56000.00",
+    "datetime": "2021-01-12T20:00:00Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 356,
+  "fields": {
+    "user": 1,
+    "category": 18,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-522.00",
+    "datetime": "2021-01-13T02:02:51Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 357,
+  "fields": {
+    "user": 1,
+    "category": 16,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-522.00",
+    "datetime": "2021-01-13T21:19:09Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 358,
+  "fields": {
+    "user": 1,
+    "category": 8,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "3770.00",
+    "datetime": "2021-01-14T19:06:37Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 359,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1003.00",
+    "datetime": "2021-01-15T01:09:12Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 360,
+  "fields": {
+    "user": 1,
+    "category": 18,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-522.00",
+    "datetime": "2021-01-15T16:30:16Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 361,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-799.00",
+    "datetime": "2021-01-19T21:03:33Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 362,
+  "fields": {
+    "user": 1,
+    "category": 10,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-522.00",
+    "datetime": "2021-01-20T10:55:45Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 363,
+  "fields": {
+    "user": 1,
+    "category": 15,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-522.00",
+    "datetime": "2021-01-20T13:47:05Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 364,
+  "fields": {
+    "user": 1,
+    "category": 19,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-522.00",
+    "datetime": "2021-01-20T14:24:36Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 365,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-436.00",
+    "datetime": "2021-01-20T18:35:52Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 366,
+  "fields": {
+    "user": 1,
+    "category": 17,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-522.00",
+    "datetime": "2021-01-21T21:13:15Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 367,
+  "fields": {
+    "user": 1,
+    "category": 17,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-522.00",
+    "datetime": "2021-01-22T19:07:51Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 368,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1264.00",
+    "datetime": "2021-01-24T12:15:44Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 369,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-522.00",
+    "datetime": "2021-01-26T01:43:28Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 370,
+  "fields": {
+    "user": 1,
+    "category": 11,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-522.00",
+    "datetime": "2021-01-26T13:02:16Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 371,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1032.00",
+    "datetime": "2021-01-27T02:43:13Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 372,
+  "fields": {
+    "user": 1,
+    "category": 10,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-522.00",
+    "datetime": "2021-01-27T13:08:43Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 373,
+  "fields": {
+    "user": 1,
+    "category": 1,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "24000.00",
+    "datetime": "2021-01-27T20:00:00Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 374,
+  "fields": {
+    "user": 1,
+    "category": 10,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1462.00",
+    "datetime": "2021-02-01T05:40:55Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 375,
+  "fields": {
+    "user": 1,
+    "category": 11,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1462.00",
+    "datetime": "2021-02-02T22:57:05Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 376,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1216.00",
+    "datetime": "2021-02-03T11:04:35Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 377,
+  "fields": {
+    "user": 1,
+    "category": 11,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1462.00",
+    "datetime": "2021-02-04T03:09:30Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 378,
+  "fields": {
+    "user": 1,
+    "category": 19,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1462.00",
+    "datetime": "2021-02-07T07:27:44Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 379,
+  "fields": {
+    "user": 1,
+    "category": 23,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1462.00",
+    "datetime": "2021-02-09T02:40:41Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 380,
+  "fields": {
+    "user": 1,
+    "category": 24,
+    "currency": 1,
+    "periodic_transaction": 1,
+    "amount": "-15000.00",
+    "datetime": "2021-02-09T14:09:18Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 381,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1188.00",
+    "datetime": "2021-02-09T17:04:52Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 382,
+  "fields": {
+    "user": 1,
+    "category": 17,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1462.00",
+    "datetime": "2021-02-12T02:58:35Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 383,
+  "fields": {
+    "user": 1,
+    "category": 1,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "56000.00",
+    "datetime": "2021-02-12T20:00:00Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 384,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1462.00",
+    "datetime": "2021-02-13T04:43:21Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 385,
+  "fields": {
+    "user": 1,
+    "category": 11,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1462.00",
+    "datetime": "2021-02-13T11:14:34Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 386,
+  "fields": {
+    "user": 1,
+    "category": 19,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1462.00",
+    "datetime": "2021-02-13T14:18:57Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 387,
+  "fields": {
+    "user": 1,
+    "category": 15,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1462.00",
+    "datetime": "2021-02-15T02:46:16Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 388,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-547.00",
+    "datetime": "2021-02-15T09:34:07Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 389,
+  "fields": {
+    "user": 1,
+    "category": 15,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1462.00",
+    "datetime": "2021-02-17T06:20:39Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 390,
+  "fields": {
+    "user": 1,
+    "category": 12,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1462.00",
+    "datetime": "2021-02-17T11:11:06Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 391,
+  "fields": {
+    "user": 1,
+    "category": 11,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1462.00",
+    "datetime": "2021-02-18T14:56:55Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 392,
+  "fields": {
+    "user": 1,
+    "category": 6,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "2743.00",
+    "datetime": "2021-02-19T07:23:39Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 393,
+  "fields": {
+    "user": 1,
+    "category": 16,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1462.00",
+    "datetime": "2021-02-19T15:42:53Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 394,
+  "fields": {
+    "user": 1,
+    "category": 18,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1462.00",
+    "datetime": "2021-02-19T18:17:16Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 395,
+  "fields": {
+    "user": 1,
+    "category": 12,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1462.00",
+    "datetime": "2021-02-20T22:36:22Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 396,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-454.00",
+    "datetime": "2021-02-22T13:12:07Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 397,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-980.00",
+    "datetime": "2021-02-24T23:15:44Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 398,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1353.00",
+    "datetime": "2021-02-25T05:42:21Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 399,
+  "fields": {
+    "user": 1,
+    "category": 1,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "24000.00",
+    "datetime": "2021-02-27T20:00:00Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 400,
+  "fields": {
+    "user": 1,
+    "category": 15,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1462.00",
+    "datetime": "2021-02-27T21:52:44Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 401,
+  "fields": {
+    "user": 1,
+    "category": 23,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1499.00",
+    "datetime": "2021-03-03T10:24:27Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 402,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-650.00",
+    "datetime": "2021-03-03T17:36:58Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 403,
+  "fields": {
+    "user": 1,
+    "category": 23,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1499.00",
+    "datetime": "2021-03-05T03:35:50Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 404,
+  "fields": {
+    "user": 1,
+    "category": 24,
+    "currency": 1,
+    "periodic_transaction": 1,
+    "amount": "-15000.00",
+    "datetime": "2021-03-08T14:47:47Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 405,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-677.00",
+    "datetime": "2021-03-09T10:52:15Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 406,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-789.00",
+    "datetime": "2021-03-10T09:08:41Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 407,
+  "fields": {
+    "user": 1,
+    "category": 17,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1499.00",
+    "datetime": "2021-03-11T03:15:28Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 408,
+  "fields": {
+    "user": 1,
+    "category": 1,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "56000.00",
+    "datetime": "2021-03-12T20:00:00Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 409,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-736.00",
+    "datetime": "2021-03-13T01:54:21Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 410,
+  "fields": {
+    "user": 1,
+    "category": 12,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1499.00",
+    "datetime": "2021-03-13T23:23:45Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 411,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-435.00",
+    "datetime": "2021-03-14T18:28:05Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 412,
+  "fields": {
+    "user": 1,
+    "category": 23,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1499.00",
+    "datetime": "2021-03-15T10:45:53Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 413,
+  "fields": {
+    "user": 1,
+    "category": 16,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1499.00",
+    "datetime": "2021-03-16T00:56:36Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 414,
+  "fields": {
+    "user": 1,
+    "category": 19,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1499.00",
+    "datetime": "2021-03-16T08:35:39Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 415,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1499.00",
+    "datetime": "2021-03-17T17:24:36Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 416,
+  "fields": {
+    "user": 1,
+    "category": 12,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1499.00",
+    "datetime": "2021-03-17T21:47:27Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 417,
+  "fields": {
+    "user": 1,
+    "category": 19,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1499.00",
+    "datetime": "2021-03-20T00:34:39Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 418,
+  "fields": {
+    "user": 1,
+    "category": 19,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1499.00",
+    "datetime": "2021-03-20T18:23:19Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 419,
+  "fields": {
+    "user": 1,
+    "category": 8,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "1664.00",
+    "datetime": "2021-03-22T20:00:02Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 420,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-505.00",
+    "datetime": "2021-03-24T03:14:39Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 421,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-776.00",
+    "datetime": "2021-03-24T04:29:16Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 422,
+  "fields": {
+    "user": 1,
+    "category": 10,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1499.00",
+    "datetime": "2021-03-24T04:36:21Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 423,
+  "fields": {
+    "user": 1,
+    "category": 12,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1499.00",
+    "datetime": "2021-03-25T08:22:03Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 424,
+  "fields": {
+    "user": 1,
+    "category": 23,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1499.00",
+    "datetime": "2021-03-25T09:15:09Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 425,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1071.00",
+    "datetime": "2021-03-25T10:20:55Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 426,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-343.00",
+    "datetime": "2021-03-25T12:18:52Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 427,
+  "fields": {
+    "user": 1,
+    "category": 17,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1499.00",
+    "datetime": "2021-03-26T23:18:50Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 428,
+  "fields": {
+    "user": 1,
+    "category": 11,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1499.00",
+    "datetime": "2021-03-27T10:13:01Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 429,
+  "fields": {
+    "user": 1,
+    "category": 1,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "24000.00",
+    "datetime": "2021-03-27T20:00:00Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 430,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-647.00",
+    "datetime": "2021-03-27T21:44:22Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 431,
+  "fields": {
+    "user": 1,
+    "category": 11,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1499.00",
+    "datetime": "2021-03-28T11:48:09Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 432,
+  "fields": {
+    "user": 1,
+    "category": 11,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-774.00",
+    "datetime": "2021-03-31T20:05:41Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 433,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-560.00",
+    "datetime": "2021-03-31T21:01:09Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 434,
+  "fields": {
+    "user": 1,
+    "category": 19,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-774.00",
+    "datetime": "2021-04-01T04:26:19Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 435,
+  "fields": {
+    "user": 1,
+    "category": 15,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-774.00",
+    "datetime": "2021-04-02T00:25:59Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 436,
+  "fields": {
+    "user": 1,
+    "category": 18,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-774.00",
+    "datetime": "2021-04-02T19:10:45Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 437,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1367.00",
+    "datetime": "2021-04-03T11:01:17Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 438,
+  "fields": {
+    "user": 1,
+    "category": 24,
+    "currency": 1,
+    "periodic_transaction": 1,
+    "amount": "-15000.00",
+    "datetime": "2021-04-03T19:43:59Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 439,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-774.00",
+    "datetime": "2021-04-05T02:04:41Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 440,
+  "fields": {
+    "user": 1,
+    "category": 18,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-774.00",
+    "datetime": "2021-04-05T13:25:06Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 441,
+  "fields": {
+    "user": 1,
+    "category": 16,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-774.00",
+    "datetime": "2021-04-05T15:37:32Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 442,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-462.00",
+    "datetime": "2021-04-05T18:28:09Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 443,
+  "fields": {
+    "user": 1,
+    "category": 19,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-774.00",
+    "datetime": "2021-04-10T15:31:11Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 444,
+  "fields": {
+    "user": 1,
+    "category": 10,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-774.00",
+    "datetime": "2021-04-11T01:43:16Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 445,
+  "fields": {
+    "user": 1,
+    "category": 6,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "3392.00",
+    "datetime": "2021-04-11T09:31:38Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 446,
+  "fields": {
+    "user": 1,
+    "category": 1,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "56000.00",
+    "datetime": "2021-04-12T20:00:00Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 447,
+  "fields": {
+    "user": 1,
+    "category": 14,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-774.00",
+    "datetime": "2021-04-14T22:37:27Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 448,
+  "fields": {
+    "user": 1,
+    "category": 11,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-774.00",
+    "datetime": "2021-04-15T14:54:33Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 449,
+  "fields": {
+    "user": 1,
+    "category": 14,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-774.00",
+    "datetime": "2021-04-17T00:12:35Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 450,
+  "fields": {
+    "user": 1,
+    "category": 19,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-774.00",
+    "datetime": "2021-04-17T17:14:25Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 451,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1232.00",
+    "datetime": "2021-04-19T07:57:09Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 452,
+  "fields": {
+    "user": 1,
+    "category": 11,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-774.00",
+    "datetime": "2021-04-19T16:02:24Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 453,
+  "fields": {
+    "user": 1,
+    "category": 16,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-774.00",
+    "datetime": "2021-04-21T11:25:10Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 454,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-610.00",
+    "datetime": "2021-04-21T23:36:34Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 455,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1288.00",
+    "datetime": "2021-04-22T19:44:04Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 456,
+  "fields": {
+    "user": 1,
+    "category": 19,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-774.00",
+    "datetime": "2021-04-24T12:11:36Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 457,
+  "fields": {
+    "user": 1,
+    "category": 19,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-774.00",
+    "datetime": "2021-04-24T20:43:37Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 458,
+  "fields": {
+    "user": 1,
+    "category": 19,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-774.00",
+    "datetime": "2021-04-25T20:20:54Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 459,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-909.00",
+    "datetime": "2021-04-27T04:47:27Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 460,
+  "fields": {
+    "user": 1,
+    "category": 1,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "24000.00",
+    "datetime": "2021-04-27T20:00:00Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 461,
+  "fields": {
+    "user": 1,
+    "category": 19,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-774.00",
+    "datetime": "2021-04-28T10:14:17Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 462,
+  "fields": {
+    "user": 1,
+    "category": 15,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-774.00",
+    "datetime": "2021-04-28T10:49:50Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 463,
+  "fields": {
+    "user": 1,
+    "category": 17,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-346.00",
+    "datetime": "2021-04-30T22:15:55Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 464,
+  "fields": {
+    "user": 1,
+    "category": 12,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-346.00",
+    "datetime": "2021-05-01T06:47:09Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 465,
+  "fields": {
+    "user": 1,
+    "category": 10,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-346.00",
+    "datetime": "2021-05-01T07:19:55Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 466,
+  "fields": {
+    "user": 1,
+    "category": 15,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-346.00",
+    "datetime": "2021-05-03T03:07:11Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 467,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-329.00",
+    "datetime": "2021-05-04T00:39:25Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 468,
+  "fields": {
+    "user": 1,
+    "category": 10,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-346.00",
+    "datetime": "2021-05-04T07:27:58Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 469,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-679.00",
+    "datetime": "2021-05-07T22:38:03Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 470,
+  "fields": {
+    "user": 1,
+    "category": 10,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-346.00",
+    "datetime": "2021-05-08T00:19:04Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 471,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-346.00",
+    "datetime": "2021-05-08T06:00:44Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 472,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1425.00",
+    "datetime": "2021-05-08T13:26:45Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 473,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-586.00",
+    "datetime": "2021-05-08T23:42:11Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 474,
+  "fields": {
+    "user": 1,
+    "category": 1,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "56000.00",
+    "datetime": "2021-05-12T20:00:00Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 475,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-892.00",
+    "datetime": "2021-05-14T01:24:15Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 476,
+  "fields": {
+    "user": 1,
+    "category": 24,
+    "currency": 1,
+    "periodic_transaction": 1,
+    "amount": "-15000.00",
+    "datetime": "2021-05-14T03:58:24Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 477,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1395.00",
+    "datetime": "2021-05-15T20:48:55Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 478,
+  "fields": {
+    "user": 1,
+    "category": 23,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-346.00",
+    "datetime": "2021-05-17T07:25:22Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 479,
+  "fields": {
+    "user": 1,
+    "category": 18,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-346.00",
+    "datetime": "2021-05-20T19:10:23Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 480,
+  "fields": {
+    "user": 1,
+    "category": 23,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-346.00",
+    "datetime": "2021-05-22T03:29:08Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 481,
+  "fields": {
+    "user": 1,
+    "category": 10,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-346.00",
+    "datetime": "2021-05-22T08:59:11Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 482,
+  "fields": {
+    "user": 1,
+    "category": 19,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-346.00",
+    "datetime": "2021-05-23T05:14:41Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 483,
+  "fields": {
+    "user": 1,
+    "category": 17,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-346.00",
+    "datetime": "2021-05-23T11:27:53Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 484,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-346.00",
+    "datetime": "2021-05-24T03:03:30Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 485,
+  "fields": {
+    "user": 1,
+    "category": 18,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-346.00",
+    "datetime": "2021-05-24T16:06:23Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 486,
+  "fields": {
+    "user": 1,
+    "category": 18,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-346.00",
+    "datetime": "2021-05-24T16:30:55Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 487,
+  "fields": {
+    "user": 1,
+    "category": 11,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-346.00",
+    "datetime": "2021-05-24T20:58:44Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 488,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1195.00",
+    "datetime": "2021-05-26T03:47:03Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 489,
+  "fields": {
+    "user": 1,
+    "category": 1,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "24000.00",
+    "datetime": "2021-05-27T20:00:00Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 490,
+  "fields": {
+    "user": 1,
+    "category": 8,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "4367.00",
+    "datetime": "2021-05-27T23:09:04Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 491,
+  "fields": {
+    "user": 1,
+    "category": 12,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-562.00",
+    "datetime": "2021-06-02T07:08:41Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 492,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1312.00",
+    "datetime": "2021-06-04T23:39:07Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 493,
+  "fields": {
+    "user": 1,
+    "category": 15,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-562.00",
+    "datetime": "2021-06-05T05:32:12Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 494,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-384.00",
+    "datetime": "2021-06-05T19:46:53Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 495,
+  "fields": {
+    "user": 1,
+    "category": 15,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-562.00",
+    "datetime": "2021-06-05T20:49:24Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 496,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1299.00",
+    "datetime": "2021-06-05T22:26:10Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 497,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-544.00",
+    "datetime": "2021-06-06T22:47:34Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 498,
+  "fields": {
+    "user": 1,
+    "category": 24,
+    "currency": 1,
+    "periodic_transaction": 1,
+    "amount": "-15000.00",
+    "datetime": "2021-06-09T16:34:31Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 499,
+  "fields": {
+    "user": 1,
+    "category": 17,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-562.00",
+    "datetime": "2021-06-09T18:36:45Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 500,
+  "fields": {
+    "user": 1,
+    "category": 10,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-562.00",
+    "datetime": "2021-06-10T09:22:20Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 501,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-523.00",
+    "datetime": "2021-06-10T19:02:27Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 502,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-562.00",
+    "datetime": "2021-06-10T21:00:27Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 503,
+  "fields": {
+    "user": 1,
+    "category": 1,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "56000.00",
+    "datetime": "2021-06-12T20:00:00Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 504,
+  "fields": {
+    "user": 1,
+    "category": 15,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-562.00",
+    "datetime": "2021-06-15T01:12:27Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 505,
+  "fields": {
+    "user": 1,
+    "category": 17,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-562.00",
+    "datetime": "2021-06-16T06:11:50Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 506,
+  "fields": {
+    "user": 1,
+    "category": 23,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-562.00",
+    "datetime": "2021-06-16T22:30:37Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 507,
+  "fields": {
+    "user": 1,
+    "category": 15,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-562.00",
+    "datetime": "2021-06-17T20:36:46Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 508,
+  "fields": {
+    "user": 1,
+    "category": 23,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-562.00",
+    "datetime": "2021-06-19T12:49:55Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 509,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-439.00",
+    "datetime": "2021-06-19T16:47:13Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 510,
+  "fields": {
+    "user": 1,
+    "category": 11,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-562.00",
+    "datetime": "2021-06-20T10:38:09Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 511,
+  "fields": {
+    "user": 1,
+    "category": 16,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-562.00",
+    "datetime": "2021-06-21T01:43:23Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 512,
+  "fields": {
+    "user": 1,
+    "category": 6,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "3545.00",
+    "datetime": "2021-06-21T14:24:32Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 513,
+  "fields": {
+    "user": 1,
+    "category": 10,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-562.00",
+    "datetime": "2021-06-22T15:31:38Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 514,
+  "fields": {
+    "user": 1,
+    "category": 10,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-562.00",
+    "datetime": "2021-06-25T03:52:57Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 515,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1298.00",
+    "datetime": "2021-06-26T17:28:45Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 516,
+  "fields": {
+    "user": 1,
+    "category": 9,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-1002.00",
+    "datetime": "2021-06-26T23:02:56Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 517,
+  "fields": {
+    "user": 1,
+    "category": 18,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-562.00",
+    "datetime": "2021-06-27T04:01:46Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 518,
+  "fields": {
+    "user": 1,
+    "category": 1,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "24000.00",
+    "datetime": "2021-06-27T20:00:00Z",
+    "comment": "",
+    "receipt": ""
+  }
+},
+{
+  "model": "finance.transaction",
+  "pk": 519,
+  "fields": {
+    "user": 1,
+    "category": 14,
+    "currency": 1,
+    "periodic_transaction": null,
+    "amount": "-562.00",
+    "datetime": "2021-06-27T20:12:03Z",
+    "comment": "",
+    "receipt": ""
+  }
+}
+]

@@ -5,15 +5,27 @@
 {% load render_table from django_tables2 %}
 {% load django_bootstrap5 %}
 
+
 {% block content %}
-  {% if filter %}
-    <form method="get" class="row row-cols-lg-auto g-3 align-items-center" >
-      {% bootstrap_form filter.form layout='inline' %}
-      {% bootstrap_button 'filter' %}
-    </form>
-  {% endif %}
-  {% render_table table %}
+<div class="section mb-5 p-2">
+    <div class="card p-1">
+      {% if filter %}
+      <form method="get" class="row row-cols-lg-auto g-3 align-items-center" >
+        {% bootstrap_form filter.form layout='inline' %}
+        <div class="p-1">
+          {% bootstrap_button 'Обновить' button_class='btn btn-primary btn-sm btn-block' %}
+        </div>
+      </form>
+      {% endif %}
+    </div>
+
+    <div class="card mt-2">
+      {% render_table table %}
+    </div>
+
+
 {% endblock %}
+</div>
 
 {% block bootstrap5_after_content %}
   <!-- Modal -->
@@ -30,7 +42,8 @@
             <p>Удалить транзакцию? Это действие необратимо.</p>
           </div>
           <div class="modal-footer">
-            {% bootstrap_button "Delete" button_type="submit" button_class="btn-danger" %}
+            {% translate 'Delete' as delete_text %}
+            {% bootstrap_button button_type="submit" button_class="btn-danger" content=delete_text %}
             {% comment %} TODO: bootstrap_button data-bs-dismiss
             {% bootstrap_button "Close" "data-bs-dismiss"="modal" button_class="btn-secondary" %} {% endcomment %}
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{% translate 'Cancel' %}

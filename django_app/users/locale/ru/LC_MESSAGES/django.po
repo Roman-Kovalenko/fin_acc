@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-29 23:47+0400\n"
+"POT-Creation-Date: 2021-07-01 18:00+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -32,47 +32,51 @@ msgstr "Суперпользователь должен быть с is_staff=Tru
 msgid "Superuser must have is_superuser=True."
 msgstr "Суперпользователь должен быть с is_superuser=True."
 
-#: django_app/users/models.py:15
+#: django_app/users/models.py:16
 msgid "email address"
 msgstr "адрес электронной почты"
 
-#: django_app/users/models.py:17
+#: django_app/users/models.py:18
 msgid "surname"
 msgstr "фамилия"
 
-#: django_app/users/models.py:18
+#: django_app/users/models.py:19
 msgid "name"
 msgstr "имя"
 
-#: django_app/users/models.py:20
+#: django_app/users/models.py:21
 msgid "patronymic"
 msgstr "отчество"
 
-#: django_app/users/models.py:21
+#: django_app/users/models.py:22
 msgid "is staff"
 msgstr "это персонал"
 
-#: django_app/users/models.py:22
+#: django_app/users/models.py:23
 msgid "is active"
 msgstr "активный?"
 
-#: django_app/users/models.py:23
+#: django_app/users/models.py:24
 msgid "date joined"
 msgstr "дата регистрации"
 
-#: django_app/users/models.py:26
+#: django_app/users/models.py:27
 msgid "initial amount"
 msgstr "начальная сумма"
 
 #: django_app/users/models.py:32
+msgid "The amount you currently have"
+msgstr "Сумма, которой вы располагаете"
+
+#: django_app/users/models.py:36
 msgid "current amount"
 msgstr "текущая сумма"
 
-#: django_app/users/models.py:50
+#: django_app/users/models.py:54
 msgid "user"
 msgstr "пользователь"
 
-#: django_app/users/models.py:51
+#: django_app/users/models.py:55
 msgid "users"
 msgstr "пользователи"
 

@@ -2,6 +2,7 @@ from django import forms
 from django.utils.translation import gettext_lazy as _
 
 from .models import TransactionCategory, Transaction, PeriodicTransaction
+from .widgets import SelectWithCreateButton
 
 
 class TransactionCategoryForm(forms.ModelForm):
@@ -14,8 +15,6 @@ class TransactionCategoryForm(forms.ModelForm):
         widgets = {'is_debit': forms.HiddenInput}
 
 
-# TODO: Добавить рядом с выбором категорий кнопку, открывающую модальное окно
-# с формой создания категории
 class TransactionForm(forms.ModelForm):
     """
     Форма создания транзакции
@@ -24,7 +23,10 @@ class TransactionForm(forms.ModelForm):
         model = Transaction
         fields = ('datetime', 'amount', 'currency', 'category',
                   'periodic_transaction', 'comment', 'receipt')
-        widgets = {'periodic_transaction': forms.HiddenInput}
+        widgets = {
+            'periodic_transaction': forms.HiddenInput,
+            'category': SelectWithCreateButton
+        }
 
     def __init__(self, *args, **kwargs):
         self.is_debit = kwargs['initial'].pop('is_debit')
