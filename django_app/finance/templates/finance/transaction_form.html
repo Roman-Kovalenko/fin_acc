@@ -1,5 +1,7 @@
 {% extends 'base.html' %}
 
+{% load i18n %}
+{% load static %}
 {% load django_bootstrap5 %}
 
 {% block content %}
@@ -21,4 +23,36 @@
 
   
   </form>
+{% endblock %}
+
+{% block bootstrap5_after_content %}
+  <!-- Modal -->
+  <div class="modal fade" id="addDialogModal" tabindex="-1" aria-labelledby="addModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <form id="modalForm" method="post" enctype="multipart/form-data" action="{{ transaction_category_create_url }}">
+          {% csrf_token %}
+          <div class="modal-header">
+            <h5 class="modal-title" id="addModalLabel">{{ transaction_category_create_title }}</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+          </div>
+          <div class="modal-footer">
+            {% translate 'Create' as create_text %}
+            {% bootstrap_button create_text button_type="submit" button_class="btn-primary" %}
+            {% comment %} TODO: bootstrap_button data-bs-dismiss
+            {% bootstrap_button cancel_text "data-bs-dismiss"="modal" button_class="btn-secondary" %} {% endcomment %}
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{% translate 'Cancel' %}
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+
+{% block bootstrap5_extra_script %}
+  {# TODO: Пепеписать работу с ajax и избавиться от jquery #}
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="{% static 'finance/js/transaction_category_modal_create.js' %}"></script>
 {% endblock %}

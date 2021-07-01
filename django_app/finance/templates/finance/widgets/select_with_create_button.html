@@ -1,0 +1,7 @@
+{% load static %}
+<div class="input-group">
+  {% include "django/forms/widgets/select.html" %}
+  <button class="btn btn-outline-secondary" type="button" id="button-for-{{ widget.name }}" data-bs-toggle="modal" data-bs-target="#addDialogModal">
+    <img src="{% static 'admin/img/icon-addlink.svg' %}" alt="add">
+  </button>
+</div>
