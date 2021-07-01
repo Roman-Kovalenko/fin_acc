@@ -42,7 +42,7 @@ class CustomUser(AbstractBaseUser, PermissionsMixin):
 
     def __str__(self):
         fio = ' '.join(
-            i for i in (self.surname, self.patronymic, self.name) if i)
+            i for i in (self.surname, self.name, self.patronymic) if i)
         return fio or self.email
 
     class Meta:
