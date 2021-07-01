@@ -33,6 +33,7 @@ from .tables import (
     PeriodicTransactionTable,
     CurrentMonthPeriodicTransactionTable
 )
+from .mixins import AjaxableResponseMixin
 
 
 class TransactionCategoryCreateMixin():
@@ -43,11 +44,13 @@ class TransactionCategoryCreateMixin():
     success_url = reverse_lazy('finance:main')
     form_class = TransactionCategoryForm
     success_message = _('Transaction category was created successfully')
+    ajax_template_name = 'finance/form_for_ajax.html'
 
 
 @method_decorator(login_required, name='dispatch')
 class TransactionCategoryDebitCreateView(
-        TransactionCategoryCreateMixin, SuccessMessageMixin, CreateView):
+        AjaxableResponseMixin, TransactionCategoryCreateMixin,
+        SuccessMessageMixin, CreateView):
     """
     View создания категории транзакции с is_debit = True
     """
@@ -57,7 +60,8 @@ class TransactionCategoryDebitCreateView(
 
 @method_decorator(login_required, name='dispatch')
 class TransactionCategoryCreditCreateView(
-        TransactionCategoryCreateMixin, SuccessMessageMixin, CreateView):
+        AjaxableResponseMixin, TransactionCategoryCreateMixin,
+        SuccessMessageMixin, CreateView):
     """
     View создания категории транзакции с is_debit = False
     """
@@ -91,7 +95,13 @@ class TransactionDebitCreateView(
     View создания транзакций с is_debit = True
     """
     initial = {'is_debit': True}
-    extra_context = {'title': _('Create debit transaction')}
+    extra_context = {
+        'title': _('Create debit transaction'),
+        'transaction_category_create_title':
+            _('Create debit transaction category'),
+        'transaction_category_create_url':
+            reverse_lazy('finance:transaction_category:create:debit')
+    }
     success_message = _('Transaction debit was created successfully')
 
 
@@ -102,7 +112,13 @@ class TransactionCreditCreateView(
     View создания транзакций с is_debit = False
     """
     initial = {'is_debit': False}
-    extra_context = {'title': _('Create credit transaction')}
+    extra_context = {
+        'title': _('Create credit transaction'),
+        'transaction_category_create_title':
+            _('Create credit transaction category'),
+        'transaction_category_create_url':
+            reverse_lazy('finance:transaction_category:create:credit')
+    }
     success_message = _('Transaction credit was created successfully')
 
 
@@ -233,7 +249,8 @@ class PeriodicTransactionCreditUpdateView(
 
 
 @method_decorator(login_required, name='dispatch')
-class PeriodicTransactionDeleteView(PeriodicTransactionMixin, SuccessMessageMixin, DeleteView):
+class PeriodicTransactionDeleteView(
+        PeriodicTransactionMixin, SuccessMessageMixin, DeleteView):
     """
     View удаления периодических транзакций
     """
