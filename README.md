@@ -33,7 +33,6 @@ docker-compose exec web python django_app/manage.py createsuperuser
 
 После запуска докера сайт будет доступен по адресу `http://127.0.0.1:8080/`
 
-
 ### Без использования Docker
 Создаем виртуальное окружение
 ```sh
@@ -69,6 +68,9 @@ python django_app/manage.py loaddata fixtures.json
 ```sh
 python django_app/manage.py runserver 8080
 ```
+
+## Тестовые данные
+Если фикстура была загружена, будет доступен тестовый пользователь с логином `example@example.com` и паролем `pswpswpswp`
 
 ## TODO
 - Написать тесты
