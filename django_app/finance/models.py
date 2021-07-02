@@ -120,7 +120,7 @@ class PeriodicTransaction(models.Model):
                        kwargs={'pk': self.id})
 
     class Meta:
-        ordering = ['pay_day']
+        ordering = ['-pay_day']
         db_table = 'periodic_transaction'
         verbose_name = _('periodic transaction')
         verbose_name_plural = _('periodic transactions')
@@ -189,7 +189,7 @@ class Transaction(models.Model):
             self.category = self.periodic_transaction.category
 
     class Meta:
-        ordering = ['datetime']
+        ordering = ['-datetime']
         db_table = 'transaction'
         verbose_name = _('transaction')
         verbose_name_plural = _('transactions')
