@@ -163,5 +163,5 @@ EMAIL_PORT = os.environ.get('EMAIL_PORT', 587)
 
 
 #django_tables2
-DJANGO_TABLES2_TEMPLATE = "django_tables2/bootstrap4.html"
+DJANGO_TABLES2_TEMPLATE = "bootstrap4_table_with_small_pagination.html"
 DJANGO_TABLES2_PAGE_RANGE = 5

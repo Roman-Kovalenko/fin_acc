@@ -32,7 +32,6 @@ class TransactionTable(tables.Table):
 
     class Meta:
         model = Transaction
-        template_name = 'django_tables2/bootstrap-responsive.html'
         sequence = ('datetime', 'amount', 'currency',
                     'category', 'user', 'comment', 'receipt', 'get_action')
         exclude = ('id', 'periodic_transaction')
@@ -66,7 +65,6 @@ class PeriodicTransactionTable(tables.Table):
 
     class Meta:
         model = PeriodicTransaction
-        template_name = 'django_tables2/bootstrap-responsive.html'
         sequence = ('name', 'start_date', 'end_date', 'pay_day',
                     'amount', 'currency', 'category', 'user', 'comment')
         exclude = ('id',)
@@ -90,7 +88,6 @@ class CurrentMonthPeriodicTransactionTable(tables.Table):
 
     class Meta:
         model = PeriodicTransaction
-        template_name = 'django_tables2/bootstrap-responsive.html'
         sequence = ('name', 'amount', 'amount_sum',
                     'need_pay', 'pay_day', 'get_action')
         exclude = ('id', 'currency', 'category', 'user',
