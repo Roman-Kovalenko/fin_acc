@@ -166,3 +166,8 @@ EMAIL_HOST = os.environ.get('EMAIL_HOST', 'smtp.gmail.com')
 EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER', 'asdadasasddasdsa@gmail.com')
 EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD', 'passwordtest')
 EMAIL_PORT = os.environ.get('EMAIL_PORT', 587)
+
+
+
+#django_tables2
+DJANGO_TABLES2_PAGE_RANGE = 5
